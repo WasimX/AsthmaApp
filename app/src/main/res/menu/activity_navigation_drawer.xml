@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_log_symptoms"
+            android:icon="@drawable/ic_create_black_24dp"
+            android:title="Log Symptoms" />
+        <item
+            android:id="@+id/nav_history"
+            android:icon="@drawable/ic_assessment_black_24dp"
+            android:title="History" />
+        <item
+            android:id="@+id/nav_reminder"
+            android:icon="@drawable/ic_alarm_black_24dp"
+            android:title="Reminders" />
+        <item
+            android:id="@+id/nav_em_support"
+            android:icon="@drawable/ic_local_hospital_black_24dp"
+            android:title="Emergency Support" />
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_account_box_black_24dp"
+            android:title="Profile" />
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/ic_info_outline_black_24dp"
+            android:title="About Asthma" />
+        <item
+            android:id="@+id/contact_us"
+            android:icon="@drawable/ic_mail_black_24dp"
+            android:title="Contact Us" />
+    </group>
+</menu>

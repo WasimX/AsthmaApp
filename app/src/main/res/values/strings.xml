@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Asthma App</string>
+    <string name="title_activity_register">RegisterActivity</string>
+    <string name="title_activity_reset_password">ResetPasswordActivity</string>
+
+
+    <!--Base Activity-->
+    <string name="loading">Loading…</string>
+
+
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="register_user">Register User</string>
+    <string name="already_registered_sign_in_here">Already registered? Sign in here</string>
+    <string name="create_account">Register</string>
+    <string name="sign_in">Sign In</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="todo">TODO</string>
+    <string name="you_have_logged_in">You have logged in!</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="title_activity_navigation">NavigationActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+</resources>
