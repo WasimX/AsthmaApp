@@ -33,7 +33,7 @@ public class NavigationActivity extends AppCompatActivity
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                     new Log_Symptoms_Fragment()).commit();
-            navigationView.setCheckedItem(R.id.nav_log_symptoms);
+            navigationView.setCheckedItem(R.id.nav_home);
         }
     }
 
