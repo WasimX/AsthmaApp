@@ -5,32 +5,36 @@
 
     <group android:checkableBehavior="single">
         <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="@string/navi_home" />
+        <item
             android:id="@+id/nav_log_symptoms"
             android:icon="@drawable/ic_create_black_24dp"
-            android:title="Log Symptoms" />
+            android:title="@string/navi_log_symptoms" />
         <item
             android:id="@+id/nav_history"
             android:icon="@drawable/ic_assessment_black_24dp"
-            android:title="History" />
+            android:title="@string/navi_history" />
         <item
             android:id="@+id/nav_reminder"
             android:icon="@drawable/ic_alarm_black_24dp"
-            android:title="Reminders" />
+            android:title="@string/navi_reminders" />
         <item
             android:id="@+id/nav_em_support"
             android:icon="@drawable/ic_local_hospital_black_24dp"
-            android:title="Emergency Support" />
+            android:title="@string/navi_emergency_support" />
         <item
             android:id="@+id/nav_profile"
             android:icon="@drawable/ic_account_box_black_24dp"
-            android:title="Profile" />
+            android:title="@string/navi_profile" />
         <item
             android:id="@+id/nav_about"
             android:icon="@drawable/ic_info_outline_black_24dp"
-            android:title="About Asthma" />
+            android:title="@string/navi_about_asthma" />
         <item
             android:id="@+id/contact_us"
             android:icon="@drawable/ic_mail_black_24dp"
-            android:title="Contact Us" />
+            android:title="@string/navi_contact_us" />
     </group>
 </menu>

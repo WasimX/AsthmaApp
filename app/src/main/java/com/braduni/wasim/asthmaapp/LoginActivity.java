@@ -64,7 +64,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
             //close this activity
             finish();
             //opening profile activity
-            startActivity(new Intent(getApplicationContext(), DashBoardActivity.class));
+            startActivity(new Intent(getApplicationContext(), NavigationActivity.class));
         }
 
         //initializing views

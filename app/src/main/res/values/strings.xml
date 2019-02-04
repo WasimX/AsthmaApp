@@ -27,5 +27,13 @@
     <string name="action_settings">Settings</string>
     <string name="navi_username">Navi_Username</string>
     <string name="navi_useremail">Navi_UserEmail</string>
+    <string name="navi_home">Home</string>
+    <string name="navi_log_symptoms">Log Symptoms</string>
+    <string name="navi_history">History</string>
+    <string name="navi_reminders">Reminders</string>
+    <string name="navi_about_asthma">About Asthma</string>
+    <string name="navi_profile">Profile</string>
+    <string name="navi_emergency_support">Emergency Support</string>
+    <string name="navi_contact_us">Contact Us</string>
 
 </resources>
