@@ -68,7 +68,7 @@
         android:layout_marginBottom="32dp"
         android:background="@null"
         android:scaleType="centerInside"
-        android:src="@drawable/moreInfo"
+        android:src="@drawable/more_info"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
