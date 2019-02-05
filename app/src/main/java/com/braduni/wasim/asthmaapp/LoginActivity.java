@@ -25,6 +25,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 
+
 public class LoginActivity extends BaseActivity implements View.OnClickListener {
 
 
@@ -41,9 +42,9 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
 
     //defining views
     private Button buttonSignIn;
+    private Button btnViewSignUp;
     private EditText editTextEmail;
     private EditText editTextPassword;
-    private TextView textViewSignup;
     private TextView textViewResetPW;
 
     //firebase auth object
@@ -71,13 +72,13 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
         editTextEmail = findViewById(R.id.editTextEmail);
         editTextPassword = findViewById(R.id.editTextPassword);
         buttonSignIn = findViewById(R.id.buttonSignin);
-        textViewSignup  = findViewById(R.id.textViewSignUp);
+        btnViewSignUp = findViewById(R.id.btnViewSignUp);
         textViewResetPW = findViewById(R.id.textViewResetPW);
 
 
         //attaching click listener
         buttonSignIn.setOnClickListener(this);
-        textViewSignup.setOnClickListener(this);
+        btnViewSignUp.setOnClickListener(this);
         textViewResetPW.setOnClickListener(this);
 
 
@@ -248,7 +249,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
             userLogin();
         }
 
-        if(view == textViewSignup){
+        if (view == btnViewSignUp) {
             finish();
             startActivity(new Intent(this, RegisterActivity.class));
         }
