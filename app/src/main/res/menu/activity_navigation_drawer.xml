@@ -37,4 +37,5 @@
             android:icon="@drawable/ic_mail_black_24dp"
             android:title="@string/navi_contact_us" />
     </group>
+
 </menu>

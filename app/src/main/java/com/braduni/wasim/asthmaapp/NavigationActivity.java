@@ -1,5 +1,6 @@
 package com.braduni.wasim.asthmaapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -9,7 +10,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.firebase.auth.FirebaseAuth;
@@ -77,9 +77,13 @@ public class NavigationActivity extends AppCompatActivity
         }
         if (id == R.id.action_logout) {
 
-            Toast.makeText(this, "Logged out", Toast.LENGTH_SHORT).show();
 
+            FirebaseAuth.getInstance().signOut();
+            Intent intent = new Intent(NavigationActivity.this, LoginActivity.class);
+            startActivity(intent);
+            finish();
         }
+
 
         return super.onOptionsItemSelected(item);
     }
