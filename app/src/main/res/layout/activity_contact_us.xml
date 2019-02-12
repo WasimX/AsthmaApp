@@ -105,7 +105,7 @@
                 android:text="- Monday to Friday 9am to 5pm"
                 app:layout_constraintBottom_toTopOf="@+id/textView22"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/textView20"
+                app:layout_constraintStart_toEndOf="@+id/tel_number"
                 app:layout_constraintTop_toBottomOf="@+id/textView17" />
 
             <TextView
@@ -118,7 +118,7 @@
                 android:layout_marginBottom="8dp"
                 android:text="By telephone:"
                 app:layout_constraintBottom_toTopOf="@+id/textView19"
-                app:layout_constraintEnd_toStartOf="@+id/textView20"
+                app:layout_constraintEnd_toStartOf="@+id/tel_number"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView17" />
 
@@ -205,12 +205,13 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView15" />
 
             <TextView
-                android:id="@+id/textView20"
+                android:id="@+id/tel_number"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="4dp"
                 android:layout_marginBottom="8dp"
+                android:textColor="@color/hyperlink_blue"
                 android:text="0300 222 5800"
                 app:layout_constraintBottom_toTopOf="@+id/textView22"
                 app:layout_constraintEnd_toStartOf="@+id/textView21"

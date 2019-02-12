@@ -9,13 +9,29 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
-public class Contact_us_Fragment extends Fragment {
+public class Contact_us_Fragment extends Fragment implements View.OnClickListener{
+
+
+    private TextView tel_number;
+
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.activity_contact_us, container, false);
+
+        View viewLayout = inflater.inflate(R.layout.activity_contact_us, container, false);
+
+        tel_number = viewLayout.findViewById(R.id.tel_number);
+        tel_number.setOnClickListener(this);
+
+        return viewLayout;
+    }
+
+    @Override
+    public void onClick(View v) {
+        openDialer();
     }
 
     protected void openDialer(){
@@ -26,5 +42,4 @@ public class Contact_us_Fragment extends Fragment {
         // Start the dialer app activity with number
         startActivity(intent);
     }
-
 }
