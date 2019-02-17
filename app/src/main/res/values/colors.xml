@@ -10,4 +10,5 @@
 
 
     <color name="hyperlink_blue">#4286f4</color>
+    <color name="fab_pressed">#546e7a</color>
 </resources>
