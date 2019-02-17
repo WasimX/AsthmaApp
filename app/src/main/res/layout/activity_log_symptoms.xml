@@ -15,80 +15,86 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView11"
+                android:id="@+id/Q1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
-                android:text="Which Symptoms did you have today?"
+                android:text="@string/Q1"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <CheckBox
-                android:id="@+id/symptom_wheezing"
+            <RadioGroup
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginRight="8dp"
-                android:text="Wheezing"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView11" />
+                android:layout_height="match_parent"
+                android:checkedButton="1">
 
-            <CheckBox
-                android:id="@+id/symptom_mucus"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:text="Phlegm/Mucus"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/checkBox2" />
+                <RadioButton
+                    android:id="@+id/q1_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="8dp"
+                    android:text="@string/wheezing"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/Q1" />
 
-            <CheckBox
-                android:id="@+id/checkBox2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:text="Coughing"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/symptom_wheezing"
-                app:layout_constraintTop_toBottomOf="@+id/symptom_wheezing" />
+                <RadioButton
+                    android:id="@+id/q1_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:text="@string/phlegm_mucus"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/q1_3" />
 
-            <CheckBox
-                android:id="@+id/symptom_breathing"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:text="Difficulties Breathing"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/symptom_mucus" />
+                <RadioButton
+                    android:id="@+id/q1_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:text="@string/coughing"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/q1_1"
+                    app:layout_constraintTop_toBottomOf="@+id/q1_1" />
 
-            <CheckBox
-                android:id="@+id/symptom_sleeping"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:text="Difficulties Sleeping"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/symptom_breathing" />
+                <RadioButton
+                    android:id="@+id/q1_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:text="@string/difficulties_breathing"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/q1_2" />
+
+                <RadioButton
+                    android:id="@+id/q1_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:text="@string/difficulties_sleeping"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/q1_4" />
+            </RadioGroup>
 
             <TextView
                 android:id="@+id/textView12"
@@ -97,72 +103,79 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginTop="32dp"
                 android:layout_marginRight="8dp"
-                android:text="How was your asthma symptoms overall?"
+                android:text="@string/Q2"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/symptom_sleeping" />
+                app:layout_constraintTop_toBottomOf="@+id/q1_5" />
 
-            <CheckBox
-                android:id="@+id/checkBox7"
+            <RadioGroup
+                android:id="@+id/Q2"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginRight="8dp"
-                android:text="Bad"
-                app:layout_constraintBottom_toTopOf="@+id/checkBox9"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView12"
-                app:layout_constraintVertical_chainStyle="spread_inside" />
+                android:layout_height="match_parent"
+                android:checkedButton="1">
 
-            <CheckBox
-                android:id="@+id/checkBox9"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:text="Not Good"
-                app:layout_constraintBottom_toTopOf="@+id/checkBox8"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/checkBox7" />
+                <RadioButton
+                    android:id="@+id/q2_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="8dp"
+                    android:text="@string/bad"
+                    app:layout_constraintBottom_toTopOf="@+id/q2_2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView12"
+                    app:layout_constraintVertical_chainStyle="spread_inside" />
 
-            <CheckBox
-                android:id="@+id/checkBox8"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:text="Good"
-                app:layout_constraintBottom_toTopOf="@+id/checkBox10"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/checkBox9" />
+                <RadioButton
+                    android:id="@+id/q2_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:text="@string/not_good"
+                    app:layout_constraintBottom_toTopOf="@+id/q2_3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/q2_1" />
 
-            <CheckBox
-                android:id="@+id/checkBox10"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:text="Very Good"
-                app:layout_constraintBottom_toTopOf="@+id/checkBox11"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/checkBox8" />
+                <RadioButton
+                    android:id="@+id/q2_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:text="@string/good"
+                    app:layout_constraintBottom_toTopOf="@+id/q2_4"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/q2_2" />
 
-            <CheckBox
-                android:id="@+id/checkBox11"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:text="Excellent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/checkBox10" />
+                <RadioButton
+                    android:id="@+id/q2_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:text="@string/very_good"
+                    app:layout_constraintBottom_toTopOf="@+id/q2_5"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/q2_3" />
+
+                <RadioButton
+                    android:id="@+id/q2_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:text="@string/excellent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/q2_4" />
+            </RadioGroup>
 
             <TextView
                 android:id="@+id/textView13"
@@ -171,88 +184,95 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginTop="32dp"
                 android:layout_marginRight="8dp"
-                android:text="How are you feeling today?"
+                android:text="@string/Q3"
                 tools:layout_editor_absoluteX="124dp"
                 tools:layout_editor_absoluteY="558dp" />
 
-            <CheckBox
-                android:id="@+id/checkBox12"
+            <RadioGroup
+                android:id="@+id/Q3"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginRight="8dp"
-                android:text="Bad"
-                app:layout_constraintBottom_toTopOf="@+id/checkBox9"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView12"
-                app:layout_constraintVertical_chainStyle="spread_inside" />
+                android:layout_height="match_parent"
+                android:checkedButton="1">
 
-            <CheckBox
-                android:id="@+id/checkBox13"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:text="Not Good"
-                app:layout_constraintBottom_toTopOf="@+id/checkBox8"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/checkBox7" />
+                <RadioButton
+                    android:id="@+id/q3_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="8dp"
+                    android:text="@string/bad"
+                    app:layout_constraintBottom_toTopOf="@+id/q2_2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView12"
+                    app:layout_constraintVertical_chainStyle="spread_inside" />
 
-            <CheckBox
-                android:id="@+id/checkBox14"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:text="Good"
-                app:layout_constraintBottom_toTopOf="@+id/checkBox10"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/checkBox9" />
+                <RadioButton
+                    android:id="@+id/q3_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:text="@string/not_good"
+                    app:layout_constraintBottom_toTopOf="@+id/q2_3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/q2_1" />
 
-            <CheckBox
-                android:id="@+id/checkBox15"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:text="Very Good"
-                app:layout_constraintBottom_toTopOf="@+id/checkBox11"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/checkBox8" />
+                <RadioButton
+                    android:id="@+id/q3_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:text="@string/good"
+                    app:layout_constraintBottom_toTopOf="@+id/q2_4"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/q2_2" />
 
-            <CheckBox
-                android:id="@+id/checkBox16"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:text="Excellent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/checkBox10" />
+                <RadioButton
+                    android:id="@+id/q3_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:text="@string/very_good"
+                    app:layout_constraintBottom_toTopOf="@+id/q2_5"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/q2_3" />
+
+                <RadioButton
+                    android:id="@+id/q3_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:text="@string/excellent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/q2_4" />
+            </RadioGroup>
 
             <MultiAutoCompleteTextView
-                android:id="@+id/multiAutoCompleteTextView"
+                android:id="@+id/ad_notes"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
                 android:layout_marginTop="32dp"
                 android:layout_marginRight="8dp"
-                android:text="Additional Notes" />
+                android:hint="@string/additional_notes" />
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/btn_save"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
                 android:layout_marginTop="32dp"
                 android:layout_marginRight="8dp"
-                android:text="Save" />
+                android:text="@string/save" />
         </LinearLayout>
     </ScrollView>
 

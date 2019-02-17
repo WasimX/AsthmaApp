@@ -7,7 +7,7 @@
     <!--Base Activity-->
     <string name="loading">Loading…</string>
 
-
+    <!-- Login/Register/Forgotten -->
     <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="register_user">Register User</string>
@@ -15,9 +15,13 @@
     <string name="create_account">Register</string>
     <string name="sign_in">Sign In</string>
     <string name="reset_password">Reset Password</string>
-    <string name="todo">TODO</string>
     <string name="you_have_logged_in">You have logged in!</string>
     <string name="sign_out">Sign Out</string>
+
+
+    <string name="todo">TODO</string>
+
+    <!-- Navi -->
     <string name="title_activity_navigation">NavigationActivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -35,5 +39,23 @@
     <string name="navi_profile">Profile</string>
     <string name="navi_emergency_support">Emergency Support</string>
     <string name="navi_contact_us">Contact Us</string>
+
+
+    <!-- Log symptoms  -->
+    <string name="Q1">Which Symptoms did you have today?</string>
+    <string name="wheezing">Wheezing</string>
+    <string name="phlegm_mucus">Phlegm/Mucus</string>
+    <string name="coughing">Coughing</string>
+    <string name="difficulties_breathing">Difficulties Breathing</string>
+    <string name="difficulties_sleeping">Difficulties Sleeping</string>
+    <string name="Q2">How was your asthma symptoms overall?</string>
+    <string name="Q3">How are you feeling today?</string>
+    <string name="bad">Bad</string>
+    <string name="not_good">Not Good</string>
+    <string name="good">Good</string>
+    <string name="very_good">Very Good</string>
+    <string name="excellent">Excellent</string>
+    <string name="additional_notes">Additional Notes</string>
+    <string name="save">Save</string>
 
 </resources>
