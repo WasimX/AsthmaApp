@@ -9,7 +9,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
-import android.widget.Toast;
 
 public class About_Asthma_Fragment extends Fragment implements View.OnClickListener {
 
@@ -46,28 +45,28 @@ public class About_Asthma_Fragment extends Fragment implements View.OnClickListe
     public void onClick(View v) {
 
         if( v == image_button_trigger) {
-            Toast.makeText(getContext(), "test", Toast.LENGTH_SHORT).show();
-            //startActivity(new Intent(this, test.class));
+            //Toast.makeText(getContext(), "test", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(getActivity(), TriggerActivity.class));
         }
 
         if ( v == image_button_important) {
-            Toast.makeText(getContext(), "test", Toast.LENGTH_SHORT).show();
-            //startActivity(new Intent(this, test.class));
+            // Toast.makeText(getContext(), "test", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(getActivity(), ImportantActivity.class));
         }
 
         if ( v == image_button_medication) {
-            Toast.makeText(getContext(), "test", Toast.LENGTH_SHORT).show();
-           // startActivity(new Intent(this, test.class));
+            //Toast.makeText(getContext(), "test", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(getActivity(), MedicationActivity.class));
         }
 
         if ( v == image_button_moreinfo) {
-            Toast.makeText(getContext(), "test", Toast.LENGTH_SHORT).show();
-           // startActivity(new Intent(this, test.class));
+            //Toast.makeText(getContext(), "test", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(getActivity(), More_infoActivity.class));
         }
 
         if ( v == image_button_symptoms) {
-            Toast.makeText(getContext(), "test", Toast.LENGTH_SHORT).show();
-           // startActivity(new Intent(this, test.class));
+            // Toast.makeText(getContext(), "test", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(getActivity(), Symptoms_infoActivity.class));
         }
 
     }
