@@ -12,7 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
-        <activity android:name=".More_infoActivity"></activity>
+        <activity android:name=".ActionPlanActivity"></activity>
+        <activity android:name=".FirstAidActivity" />
+        <activity android:name=".More_infoActivity" />
         <activity android:name=".TriggerActivity" />
         <activity android:name=".MedicationActivity" />
         <activity android:name=".Symptoms_infoActivity" />

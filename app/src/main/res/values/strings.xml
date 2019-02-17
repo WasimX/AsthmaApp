@@ -58,4 +58,8 @@
     <string name="additional_notes">Additional Notes</string>
     <string name="save">Save</string>
 
+
+    <string name="asthma_first_aid">Asthma First Aid</string>
+    <string name="view_action_plan">View Action Plan</string>
+
 </resources>
