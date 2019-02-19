@@ -41,6 +41,9 @@
             android:name=".NavigationActivity"
             android:label="@string/title_activity_navigation"
             android:theme="@style/AppTheme.NoActionBar" />
+
+        <service android:name=".reminder.ReminderAlarmService" android:exported="false"/>
+
     </application>
 
 </manifest>
