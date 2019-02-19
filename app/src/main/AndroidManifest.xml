@@ -41,6 +41,13 @@
             android:name=".NavigationActivity"
             android:label="@string/title_activity_navigation"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".AddReminderActivity" />
+
+
+        <provider
+            android:name=".data.AlarmReminderProvider"
+            android:authorities="com.braduni.wasim.asthmaapp"
+            android:exported="false" />
 
         <service android:name=".reminder.ReminderAlarmService" android:exported="false"/>
 

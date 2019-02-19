@@ -118,7 +118,7 @@ public class Reminder_Fragment extends Fragment implements LoaderManager.LoaderC
     @Override
     public void onLoadFinished(Loader<Cursor> loader, Cursor cursor) {
         mCursorAdapter.swapCursor(cursor);
-        if (cursor.getCount() > 0){
+        if (cursor == null){
             reminderText.setVisibility(View.VISIBLE);
         }else{
             reminderText.setVisibility(View.INVISIBLE);
