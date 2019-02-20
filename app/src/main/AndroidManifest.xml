@@ -12,7 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
-        <activity android:name=".ActionPlanActivity"></activity>
+        <activity
+            android:name=".AlarmReciever"
+            android:label="@string/title_activity_alarm_reciever"></activity>
+        <activity android:name=".ActionPlanActivity" />
         <activity android:name=".FirstAidActivity" />
         <activity android:name=".More_infoActivity" />
         <activity android:name=".TriggerActivity" />
@@ -41,16 +44,8 @@
             android:name=".NavigationActivity"
             android:label="@string/title_activity_navigation"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".AddReminderActivity" />
-
-
-        <provider
-            android:name=".data.AlarmReminderProvider"
-            android:authorities="com.braduni.wasim.asthmaapp"
-            android:exported="false" />
-
-        <service android:name=".reminder.ReminderAlarmService" android:exported="false"/>
-
+        <activity android:name=".ReminderAddActivity" />
+        <activity android:name=".ReminderEditActivity" />
     </application>
 
 </manifest>

@@ -61,11 +61,10 @@
 
     <string name="asthma_first_aid">Asthma First Aid</string>
     <string name="view_action_plan">View Action Plan</string>
-	
-	
-	
-	<!-- reminder -->
-	 <string name="no_cardetails">Click on the button below to begin creating your reminder!</string>
+
+
+    <!-- reminder -->
+    <string name="no_cardetails">Click on the button below to begin creating your reminder!</string>
     <string name="title_activity_add_reminder">Add Reminder</string>
     <string name="title_activity_edit_reminder">Edit Reminder</string>
     <string name="title_activity_licenses">Licenses</string>
@@ -94,4 +93,7 @@
     <string name="editor_update_reminder_successful">Reminder updated</string>
     <string name="editor_update_reminder_failed">Error with updating reminder</string>
     <string name="reminder_title">AlarmReminder</string>
+    <string name="title_activity_alarm_reciever">AlarmReciever</string>
+
+    <string name="no_reminders">Add Reminder</string>
 </resources>
