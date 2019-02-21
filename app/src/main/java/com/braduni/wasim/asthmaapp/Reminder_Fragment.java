@@ -263,7 +263,7 @@ public class Reminder_Fragment extends Fragment  {
         @Override
         public VerticalItemHolder onCreateViewHolder(ViewGroup container, int viewType) {
             LayoutInflater inflater = LayoutInflater.from(container.getContext());
-            View root = inflater.inflate(R.layout.recycle_items, container, false);
+            View root = inflater.inflate(R.layout.alarm_items, container, false);
 
             return new VerticalItemHolder(root, this);
         }

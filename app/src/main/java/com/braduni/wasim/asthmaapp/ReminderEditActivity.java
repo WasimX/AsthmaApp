@@ -1,5 +1,3 @@
-
-
 package com.braduni.wasim.asthmaapp;
 
 import android.app.AlertDialog;
@@ -7,6 +5,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.InputType;
 import android.text.TextWatcher;
@@ -30,22 +29,7 @@ public class ReminderEditActivity extends AppCompatActivity implements
         TimePickerDialog.OnTimeSetListener,
         DatePickerDialog.OnDateSetListener {
 
-    // Constant Intent String
-    public static final String EXTRA_REMINDER_ID = "Reminder_ID";
-    // Values for orientation change
-    private static final String KEY_TITLE = "title_key";
-    private static final String KEY_TIME = "time_key";
-    private static final String KEY_DATE = "date_key";
-    private static final String KEY_REPEAT = "repeat_key";
-    private static final String KEY_REPEAT_NO = "repeat_no_key";
-    private static final String KEY_REPEAT_TYPE = "repeat_type_key";
-    private static final String KEY_ACTIVE = "active_key";
-    // Constant values in milliseconds
-    private static final long milMinute = 60000L;
-    private static final long milHour = 3600000L;
-    private static final long milDay = 86400000L;
-    private static final long milWeek = 604800000L;
-    private static final long milMonth = 2592000000L;
+    private Toolbar mToolbar;
     private EditText mTitleText;
     private TextView mDateText, mTimeText, mRepeatText, mRepeatNoText, mRepeatTypeText;
     private FloatingActionButton mFAB1;
@@ -68,23 +52,45 @@ public class ReminderEditActivity extends AppCompatActivity implements
     private ReminderDatabase rb;
     private AlarmReceiver mAlarmReceiver;
 
+    // Constant Intent String
+    public static final String EXTRA_REMINDER_ID = "Reminder_ID";
+
+    // Values for orientation change
+    private static final String KEY_TITLE = "title_key";
+    private static final String KEY_TIME = "time_key";
+    private static final String KEY_DATE = "date_key";
+    private static final String KEY_REPEAT = "repeat_key";
+    private static final String KEY_REPEAT_NO = "repeat_no_key";
+    private static final String KEY_REPEAT_TYPE = "repeat_type_key";
+    private static final String KEY_ACTIVE = "active_key";
+
+    // Constant values in milliseconds
+    private static final long milMinute = 60000L;
+    private static final long milHour = 3600000L;
+    private static final long milDay = 86400000L;
+    private static final long milWeek = 604800000L;
+    private static final long milMonth = 2592000000L;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_reminder);
 
         // Initialize Views
-        mTitleText = findViewById(R.id.reminder_title);
-        mDateText = findViewById(R.id.set_date);
-        mTimeText = findViewById(R.id.set_time);
-        mRepeatText = findViewById(R.id.set_repeat);
-        mRepeatNoText = findViewById(R.id.set_repeat_no);
-        mRepeatTypeText = findViewById(R.id.set_repeat_type);
-        mFAB1 = findViewById(R.id.starred1);
-        mFAB2 = findViewById(R.id.starred2);
-        mRepeatSwitch = findViewById(R.id.repeat_switch);
+        mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        mTitleText = (EditText) findViewById(R.id.reminder_title);
+        mDateText = (TextView) findViewById(R.id.set_date);
+        mTimeText = (TextView) findViewById(R.id.set_time);
+        mRepeatText = (TextView) findViewById(R.id.set_repeat);
+        mRepeatNoText = (TextView) findViewById(R.id.set_repeat_no);
+        mRepeatTypeText = (TextView) findViewById(R.id.set_repeat_type);
+        mFAB1 = (FloatingActionButton) findViewById(R.id.starred1);
+        mFAB2 = (FloatingActionButton) findViewById(R.id.starred2);
+        mRepeatSwitch = (Switch) findViewById(R.id.repeat_switch);
 
         // Setup Toolbar
+        setSupportActionBar(mToolbar);
         getSupportActionBar().setTitle(R.string.title_activity_edit_reminder);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
@@ -261,18 +267,18 @@ public class ReminderEditActivity extends AppCompatActivity implements
 
     // On clicking the active button
     public void selectFab1(View v) {
-        mFAB1 = findViewById(R.id.starred1);
+        mFAB1 = (FloatingActionButton) findViewById(R.id.starred1);
         mFAB1.setVisibility(View.GONE);
-        mFAB2 = findViewById(R.id.starred2);
+        mFAB2 = (FloatingActionButton) findViewById(R.id.starred2);
         mFAB2.setVisibility(View.VISIBLE);
         mActive = "true";
     }
 
     // On clicking the inactive button
     public void selectFab2(View v) {
-        mFAB2 = findViewById(R.id.starred2);
+        mFAB2 = (FloatingActionButton) findViewById(R.id.starred2);
         mFAB2.setVisibility(View.GONE);
-        mFAB1 = findViewById(R.id.starred1);
+        mFAB1 = (FloatingActionButton) findViewById(R.id.starred1);
         mFAB1.setVisibility(View.VISIBLE);
         mActive = "false";
     }

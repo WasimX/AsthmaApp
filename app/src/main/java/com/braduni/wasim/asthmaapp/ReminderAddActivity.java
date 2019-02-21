@@ -27,7 +27,7 @@ public class ReminderAddActivity extends AppCompatActivity implements
         TimePickerDialog.OnTimeSetListener,
         DatePickerDialog.OnDateSetListener{
 
-
+    private Toolbar mToolbar;
     private EditText mTitleText;
     private TextView mDateText, mTimeText, mRepeatText, mRepeatNoText, mRepeatTypeText;
     private FloatingActionButton mFAB1;
@@ -66,7 +66,7 @@ public class ReminderAddActivity extends AppCompatActivity implements
         setContentView(R.layout.activity_add_reminder);
 
         // Initialize Views
-
+        mToolbar = (Toolbar) findViewById(R.id.toolbar);
         mTitleText = (EditText) findViewById(R.id.reminder_title);
         mDateText = (TextView) findViewById(R.id.set_date);
         mTimeText = (TextView) findViewById(R.id.set_time);
@@ -77,7 +77,7 @@ public class ReminderAddActivity extends AppCompatActivity implements
         mFAB2 = (FloatingActionButton) findViewById(R.id.starred2);
 
         // Setup Toolbar
-
+        setSupportActionBar(mToolbar);
         getSupportActionBar().setTitle(R.string.title_activity_add_reminder);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);

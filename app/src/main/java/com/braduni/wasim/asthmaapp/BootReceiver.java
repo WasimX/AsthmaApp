@@ -10,12 +10,6 @@ import java.util.List;
 
 public class BootReceiver extends BroadcastReceiver {
 
-    // Constant values in milliseconds
-    private static final long milMinute = 60000L;
-    private static final long milHour = 3600000L;
-    private static final long milDay = 86400000L;
-    private static final long milWeek = 604800000L;
-    private static final long milMonth = 2592000000L;
     private String mTitle;
     private String mTime;
     private String mDate;
@@ -27,8 +21,17 @@ public class BootReceiver extends BroadcastReceiver {
     private String[] mTimeSplit;
     private int mYear, mMonth, mHour, mMinute, mDay, mReceivedID;
     private long mRepeatTime;
+
     private Calendar mCalendar;
     private AlarmReceiver mAlarmReceiver;
+
+    // Constant values in milliseconds
+    private static final long milMinute = 60000L;
+    private static final long milHour = 3600000L;
+    private static final long milDay = 86400000L;
+    private static final long milWeek = 604800000L;
+    private static final long milMonth = 2592000000L;
+
 
     @Override
     public void onReceive(Context context, Intent intent) {

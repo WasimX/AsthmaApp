@@ -83,7 +83,7 @@ public class AlarmReceiver extends BroadcastReceiver {
         intent.putExtra(ReminderEditActivity.EXTRA_REMINDER_ID, Integer.toString(ID));
         mPendingIntent = PendingIntent.getBroadcast(context, ID, intent, PendingIntent.FLAG_CANCEL_CURRENT);
 
-        // Calculate notification timein
+        // Calculate notification time in
         Calendar c = Calendar.getInstance();
         long currentTime = c.getTimeInMillis();
         long diffTime = calendar.getTimeInMillis() - currentTime;
