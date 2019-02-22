@@ -1,6 +1,9 @@
 package com.braduni.wasim.asthmaapp;
 
+import android.accessibilityservice.AccessibilityService;
 import android.app.AlarmManager;
+import android.app.Notification;
+import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
@@ -10,12 +13,18 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.BitmapFactory;
 import android.media.RingtoneManager;
+import android.os.Build;
 import android.os.SystemClock;
 import android.support.v4.app.NotificationCompat;
 
 import java.util.Calendar;
 
+import static android.content.Context.NOTIFICATION_SERVICE;
+
 public class AlarmReceiver extends BroadcastReceiver {
+
+    private final String CHANNEL_ID = "notifications";
+
     AlarmManager mAlarmManager;
     PendingIntent mPendingIntent;
 
@@ -34,20 +43,33 @@ public class AlarmReceiver extends BroadcastReceiver {
         PendingIntent mClick = PendingIntent.getActivity(context, mReceivedID, editIntent, PendingIntent.FLAG_UPDATE_CURRENT);
 
         // Create Notification
-        NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(context, "channelId")
-                .setLargeIcon(BitmapFactory.decodeResource(context.getResources(), R.mipmap.ic_launcher))
-                .setSmallIcon(R.drawable.ic_alarm_on_white_24dp)
-                .setContentTitle(context.getResources().getString(R.string.app_name))
-                .setTicker(mTitle)
-                .setContentText(mTitle)
-                .setSound(RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION))
-                .setContentIntent(mClick)
-                .setAutoCancel(true)
-                .setOnlyAlertOnce(true);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            CharSequence name = "notifications";
+            String description = "notifications";
+            int importance = NotificationManager.IMPORTANCE_DEFAULT;
+            NotificationChannel channel = new NotificationChannel(CHANNEL_ID, name, importance);
+            channel.setDescription(description);
+            // Register the channel with the system; you can't change the importance
+            // or other notification behaviors after this
+            NotificationManager notificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
+            notificationManager.createNotificationChannel(channel);
+        }
 
-        NotificationManager nManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
+        NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(context, CHANNEL_ID);
+               mBuilder.setLargeIcon(BitmapFactory.decodeResource(context.getResources(), R.mipmap.ic_launcher));
+               mBuilder.setSmallIcon(R.drawable.ic_alarm_on_white_24dp);
+               mBuilder.setContentTitle(context.getResources().getString(R.string.app_name));
+               mBuilder.setTicker(mTitle);
+               mBuilder.setContentText(mTitle);
+               mBuilder.setSound(RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION));
+               mBuilder.setContentIntent(mClick);
+               mBuilder.setAutoCancel(true);
+               mBuilder.setOnlyAlertOnce(true);
+
+        NotificationManager nManager = (NotificationManager) context.getSystemService(NOTIFICATION_SERVICE);
         nManager.notify(mReceivedID, mBuilder.build());
     }
+
 
     public void setAlarm(Context context, Calendar calendar, int ID) {
         mAlarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
@@ -117,4 +139,19 @@ public class AlarmReceiver extends BroadcastReceiver {
 
     }
 
+    private void createNotificationChannel(Context context) {
+        // Create the NotificationChannel, but only on API 26+ because
+        // the NotificationChannel class is new and not in the support library
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            CharSequence name = "notifications";
+            String description = "notifications";
+            int importance = NotificationManager.IMPORTANCE_DEFAULT;
+            NotificationChannel channel = new NotificationChannel(CHANNEL_ID, name, importance);
+            channel.setDescription(description);
+            // Register the channel with the system; you can't change the importance
+            // or other notification behaviors after this
+            NotificationManager notificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
+            notificationManager.createNotificationChannel(channel);
+        }
+    }
 }

@@ -1,10 +1,5 @@
 package com.braduni.wasim.asthmaapp;
 
-import android.content.ContentResolver;
-import android.database.Cursor;
-import android.net.Uri;
-import android.provider.BaseColumns;
-
 // Reminder class
 public class Reminder {
     private int mID;
