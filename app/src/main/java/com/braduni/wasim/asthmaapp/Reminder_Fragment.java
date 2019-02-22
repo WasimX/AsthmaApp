@@ -3,6 +3,7 @@ package com.braduni.wasim.asthmaapp;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.view.ActionMode;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -360,10 +361,8 @@ public class Reminder_Fragment extends Fragment  {
             // On long press enter action mode with context menu
             @Override
             public boolean onLongClick(View v) {
-
-               /* Reminder_Fragment activity = Reminder_Fragment.this;
-
-                activity.startActionMode(mDeleteMode);*/
+                AppCompatActivity activity = (AppCompatActivity) getActivity();
+                activity.startSupportActionMode(mDeleteMode);
                 mMultiSelector.setSelected(this, true);
                 return true;
             }
