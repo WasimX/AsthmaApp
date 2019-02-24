@@ -11,16 +11,12 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.firebase.auth.FirebaseAuth;
+
 
 public class NavigationActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-
-    private GoogleSignInClient mGoogleSignInClient;
-
-    private FirebaseAuth firebaseAuth;
 
 
 
@@ -31,11 +27,13 @@ public class NavigationActivity extends AppCompatActivity
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
+
 
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
@@ -76,7 +74,6 @@ public class NavigationActivity extends AppCompatActivity
             return true;
         }
         if (id == R.id.action_logout) {
-
 
             FirebaseAuth.getInstance().signOut();
             Intent intent = new Intent(NavigationActivity.this, LoginActivity.class);
