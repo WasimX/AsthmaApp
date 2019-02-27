@@ -13,11 +13,9 @@ import android.widget.ImageButton;
 public class About_Asthma_Fragment extends Fragment implements View.OnClickListener {
 
     private ImageButton image_button_trigger;
-    private ImageButton image_button_important;
     private ImageButton image_button_medication;
     private ImageButton image_button_moreinfo;
     private ImageButton image_button_symptoms;
-
 
     @Nullable
     @Override
@@ -26,13 +24,11 @@ public class About_Asthma_Fragment extends Fragment implements View.OnClickListe
         View rootview = inflater.inflate(R.layout.activity_about_asthma, container, false);
 
         image_button_trigger = rootview.findViewById(R.id.image_button_trigger);
-        image_button_important = rootview.findViewById(R.id.image_button_useful_info);
         image_button_medication = rootview.findViewById(R.id.image_button_medication);
         image_button_moreinfo = rootview.findViewById(R.id.image_button_moreinfo);
         image_button_symptoms = rootview.findViewById(R.id.image_button_symptoms);
 
         image_button_trigger .setOnClickListener(this);
-        image_button_important .setOnClickListener(this);
         image_button_medication.setOnClickListener(this);
         image_button_moreinfo .setOnClickListener(this);
         image_button_symptoms .setOnClickListener(this);
@@ -40,37 +36,25 @@ public class About_Asthma_Fragment extends Fragment implements View.OnClickListe
         return rootview;
     }
 
-
     @Override
     public void onClick(View v) {
 
         if( v == image_button_trigger) {
-            //Toast.makeText(getContext(), "test", Toast.LENGTH_SHORT).show();
             startActivity(new Intent(getActivity(), TriggerActivity.class));
         }
 
-        if ( v == image_button_important) {
-            // Toast.makeText(getContext(), "test", Toast.LENGTH_SHORT).show();
-            startActivity(new Intent(getActivity(), ImportantActivity.class));
-        }
-
         if ( v == image_button_medication) {
-            //Toast.makeText(getContext(), "test", Toast.LENGTH_SHORT).show();
             startActivity(new Intent(getActivity(), MedicationActivity.class));
         }
 
         if ( v == image_button_moreinfo) {
-            //Toast.makeText(getContext(), "test", Toast.LENGTH_SHORT).show();
             startActivity(new Intent(getActivity(), More_infoActivity.class));
         }
 
         if ( v == image_button_symptoms) {
-            // Toast.makeText(getContext(), "test", Toast.LENGTH_SHORT).show();
+
             startActivity(new Intent(getActivity(), Symptoms_infoActivity.class));
         }
-
     }
-
-
 }
 

@@ -94,7 +94,7 @@
     <string name="editor_update_reminder_successful">Reminder updated</string>
     <string name="editor_update_reminder_failed">Error with updating reminder</string>
     <string name="reminder_title">AlarmReminder</string>
-    <string name="title_activity_alarm_reciever">AlarmReciever</string>
+    <string name="title_activity_alarm_reciever">AlarmReceiver</string>
 
     <string name="no_reminders">Add Reminder</string>
 

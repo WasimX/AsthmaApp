@@ -71,8 +71,6 @@ public class Reminder_Fragment extends Fragment  {
         mAdapter.setItemCount(getDefaultItemCount());
         mList.setAdapter(mAdapter);
 
-
-
         // On clicking the floating action button
         mAddReminderButton.setOnClickListener(new View.OnClickListener() {
             @Override

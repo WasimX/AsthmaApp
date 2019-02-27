@@ -37,7 +37,6 @@
         <activity android:name=".TriggerActivity" />
         <activity android:name=".MedicationActivity" />
         <activity android:name=".Symptoms_infoActivity" />
-        <activity android:name=".ImportantActivity" />
 
         <receiver android:name=".BootReceiver">
             <intent-filter>

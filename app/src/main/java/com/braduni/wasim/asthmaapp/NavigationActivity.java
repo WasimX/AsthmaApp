@@ -17,9 +17,6 @@ import com.google.firebase.auth.FirebaseAuth;
 public class NavigationActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -80,8 +77,6 @@ public class NavigationActivity extends AppCompatActivity
             startActivity(intent);
             finish();
         }
-
-
         return super.onOptionsItemSelected(item);
     }
 

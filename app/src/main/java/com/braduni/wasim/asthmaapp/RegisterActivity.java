@@ -65,7 +65,6 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
             return;
         }
 
-
         showProgressDialog();
 
         mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -94,14 +93,11 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
         if( v == buttonRegister) {
             registerUser();
         }
+
         if (v == textViewSignin){
             finish();
             startActivity(new Intent(this, LoginActivity.class));
-
-
         }
     }
-
-
 }
 

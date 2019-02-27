@@ -71,7 +71,6 @@ public class AlarmReceiver extends BroadcastReceiver {
         }
     }
 
-
     public void setAlarm(Context context, Calendar calendar, int ID) {
         mAlarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
 
@@ -137,6 +136,5 @@ public class AlarmReceiver extends BroadcastReceiver {
         pm.setComponentEnabledSetting(receiver,
                 PackageManager.COMPONENT_ENABLED_STATE_DISABLED,
                 PackageManager.DONT_KILL_APP);
-
     }
 }
