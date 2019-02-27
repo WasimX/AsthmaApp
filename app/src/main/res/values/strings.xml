@@ -202,7 +202,7 @@
         <b>Step 3</b> - If you feel worse at any point OR you don\'t fell better after 10 puffs <red>call 999 for an ambulance</red>.\n\n
         <b>Step 4</b> - Repeat step 2 after 15 minutes while you\'re waiting for an ambulance.
     </string>
-    
+
     <string name="call_emergency">
         <b>Call emergency assistance immediately (Dial 999) if …\n\n</b>
         - If the person is not breathing\n\n
@@ -220,7 +220,7 @@
         Mucus can block the inside of your airways as well. Sometimes your airways tighten up as well… so there is less space to breathe through,
         and that\'s what leads to asthma symptoms!
     </string>
-    
+
     <string name="common_symptoms">
         <b>Common symptoms:</b>\n
         - Wheezing\n
@@ -240,7 +240,6 @@
         Know what you specific symptoms and triggers are. If symptoms are not getting better, see your doctor to help you find a better way to control them!
         And make sure you have a current asthma action plan! it will help you know what you are doing well, and what you need to get help with.
     </string>
-
 
 
     <!-- Medication -->
@@ -265,12 +264,8 @@
         that works to manage your asthma. Talk to your doctor about the choices that are available for you asthma treatment.
     </string>
 
-
-
-
-
-
-
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>
