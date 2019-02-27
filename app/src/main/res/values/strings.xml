@@ -18,7 +18,7 @@
     <string name="you_have_logged_in">You have logged in!</string>
     <string name="sign_out">Sign Out</string>
 
-
+    <!-- TO DO -->
     <string name="todo">TODO</string>
 
     <!-- Navi -->
@@ -97,4 +97,96 @@
     <string name="title_activity_alarm_reciever">AlarmReciever</string>
 
     <string name="no_reminders">Add Reminder</string>
+
+
+    <!-- Trigger page -->
+    <string name="trigger_title"><b>Understanding asthma triggers</b></string>
+    <string name="trigger_subheading">Knowing what your triggers are and how to deal with them means you’re more likely to stay well with your asthma.</string>
+    <string name="trigger_body1">If you have asthma your airways are already more inflamed than the airways of someone without asthma. This means they’re more sensitive and more likely to react to triggers.\n\n
+        That’s why it’s so important to take your preventer inhaler every day. It keeps down the inflammation in your airways, so you’ll be less likely to react to your asthma triggers. </string>
+
+    <string name="trigger_body2">
+       <b>What’s an asthma trigger?</b>\n\n
+        An asthma trigger is anything that can set off your asthma symptoms. Common triggers include colds and viruses, pets, cigarette smoke, cold weather and pollen.\n\n
+        You may have just one or two triggers, or several. What sets off your asthma symptoms may be different to what sets off someone else’s. Everyone with asthma has their own set of asthma triggers.\n\n
+        It’s helpful to know what your triggers are so you can avoid them if possible.
+    </string>
+
+    <string name="trigger_body3">
+      <b>Why is a reaction to a trigger sometimes worse than at other times?</b>\n\n
+        Sometimes you may be more likely to react badly to your usual asthma triggers than at other times. This may be because asthma symptoms are caused by more than one asthma trigger at the same time. For example, if you have a cold and you also come into contact with a cat it can cause a stronger reaction.\n\n
+        “The sensitivity in your airways can vary day to day, month to month and year to year,” says Asthma UK nurse, Kathy. “But to keep things steady, and stay on top of the inflammation, take your preventer inhaler every day as prescribed. That way your triggers are less likely to cause symptoms.”
+    </string>
+
+    <string name="trigger_body4">
+     <b>How to deal with asthma triggers</b>\n\n
+     Some asthma triggers are avoidable, such as cigarette smoke, pets and alcohol. But it’s impossible to completely avoid others – things like pollen, pollution, and cold weather.\n\n
+     The good news is there are proven steps you can take to cut your risk of asthma triggers causing asthma symptoms or an asthma attack:\n\n
+     <b>1. TAKE YOUR PREVENTER MEDICINE EVERY DAY</b>\n\n
+     The best way to help your body cope well with any asthma triggers is to take your preventer inhaler every day as prescribed.\n\n
+     Your preventer medicine works away in the background to help inflammation and sensitivity in your airways.\n\n
+     Taking it every day, and in the right way, means there’s less chance of a reaction if you come into contact with any triggers.\n\n
+        <b>2. USE A WRITTEN ASTHMA ACTION PLAN</b>\n\n
+     Use your written asthma action plan to note down your triggers so you can spot when your asthma needs extra help.\n\n
+     Using an action plan cuts your risk of ending up in hospital due to your asthma. It contains all the information you need to look after your asthma well and reduce your likelihood of getting symptoms.\n\n
+     If you haven’t got one, download an asthma action plan now and fill it in with your GP or asthma nurse.\n\n
+         <b>3. GO FOR AN ASTHMA REVIEW AT LEAST ONCE A YEAR</b>\n\n
+     An asthma review gives you and your GP or asthma nurse a chance to make sure your written asthma action plan is up to date.\n\n
+     You can check you’re taking the right medicines at the right doses so you’re getting the best protection against your triggers and cutting your risk of an asthma attack.\n\n
+     You can also check you’re using your inhaler in the best way - it might be that something as simple as a change of inhaler technique could help you manage your asthma better.
+    </string>
+
+
+    <!-- Contact us -->
+    <string name="cu_title">
+        <b>Get In Touch with Us</b>
+    </string>
+
+    <string name="cu_body1">
+        If you have an enquiry relating to Asthma UK including membership, donations, our resources, or indeed have a complaint, then please contact our Supporter Care Team.
+    </string>
+
+    <string name="cu_address">
+    Supporter Care Team,\n
+    Asthma UK,\n
+    18 Mansell Street,\n
+    London,\n
+    E1 8AA.
+    </string>
+    <string name="cu_date_time">Monday to Friday 9am to 5pm</string>
+    <string name="cu_asthma_no">0300 222 5800</string>
+    <string name="cu_email">By email:</string>
+    <string name="cu_post_body">By post: You can write to us at:</string>
+    <string name="cu_telephone">By telephone:</string>
+    <string name="cu_please_visit">Please visit our</string>
+    <string name="cu_asthmauk_email">info@asthma.org.uk</string>
+    <string name="cu_helppage_link">Helpline Page</string>
+    <string name="cu_more_information">for more information.</string>
+
+
+    <!-- About Asthma -->
+    <string name="about_asthma_body">Just about everyone can improve their asthma. Learn new strategies, tips and techniques to improve yours.</string>
+    <string name="useful_info">Useful Info</string>
+    <string name="medication">Medication</string>
+    <string name="more_info">More info</string>
+    <string name="triggers">Triggers</string>
+    <string name="symptoms">Symptoms</string>
+
+
+    <!-- Action Plan-->
+    <string name="title_activity_action__plan">Action_Plan</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="tab_text_3">Tab 3</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+    <!-- Reminders -->
+    <string name="date_icon">Date Icon</string>
+    <string name="off">Off</string>
+    <string name="on">On</string>
+    <string name="time_icon">Time Icon</string>
+    <string name="repeat_icon">Repeat Icon</string>
+    <string name="repear_inteval">Repear Inteval</string>
+    <string name="repeat_period">Repeat Period</string>
+
 </resources>

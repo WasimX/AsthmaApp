@@ -22,7 +22,6 @@ import com.amulyakhare.textdrawable.util.ColorGenerator;
 import com.bignerdranch.android.multiselector.ModalMultiSelectorCallback;
 import com.bignerdranch.android.multiselector.MultiSelector;
 import com.bignerdranch.android.multiselector.SwappingHolder;
-import com.getbase.floatingactionbutton.FloatingActionButton;
 
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -53,9 +52,9 @@ public class Reminder_Fragment extends Fragment  {
         rb = new ReminderDatabase(getContext());
 
         // Initialize views
-        mAddReminderButton = (FloatingActionButton) view.findViewById(R.id.add_reminder);
-        mList = (RecyclerView) view.findViewById(R.id.reminder_list);
-        mNoReminderView = (TextView) view.findViewById(R.id.no_reminder_text);
+        mAddReminderButton = view.findViewById(R.id.add_reminder);
+        mList = view.findViewById(R.id.reminder_list);
+        mNoReminderView = view.findViewById(R.id.no_reminder_text);
 
         // To check is there are saved reminders
         // If there are no reminders display a message asking the user to create reminders
@@ -212,29 +211,6 @@ public class Reminder_Fragment extends Fragment  {
         return 100;
     }
 
-    // Create menu
-
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getActivity().getMenuInflater().inflate(R.menu.main_menu, menu);
-        return true;
-    }
-
-    // Setup menu
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            // start licenses activity
-            case R.id.action_licenses:
-                //Intent intent = new Intent(this, LicencesActivity.class);
-                //startActivity(intent);
-                return true;
-
-            default:
-                return super.onOptionsItemSelected(item);
-        }
-    }
-
-
     // Adapter class for recycler view
     public class SimpleAdapter extends RecyclerView.Adapter<SimpleAdapter.VerticalItemHolder> {
         private ArrayList<ReminderItem> mItems;
@@ -337,11 +313,11 @@ public class Reminder_Fragment extends Fragment  {
                 mAdapter = adapter;
 
                 // Initialize views
-                mTitleText = (TextView) itemView.findViewById(R.id.recycle_title);
-                mDateAndTimeText = (TextView) itemView.findViewById(R.id.recycle_date_time);
-                mRepeatInfoText = (TextView) itemView.findViewById(R.id.recycle_repeat_info);
-                mActiveImage = (ImageView) itemView.findViewById(R.id.active_image);
-                mThumbnailImage = (ImageView) itemView.findViewById(R.id.thumbnail_image);
+                mTitleText = itemView.findViewById(R.id.recycle_title);
+                mDateAndTimeText = itemView.findViewById(R.id.recycle_date_time);
+                mRepeatInfoText = itemView.findViewById(R.id.recycle_repeat_info);
+                mActiveImage = itemView.findViewById(R.id.active_image);
+                mThumbnailImage = itemView.findViewById(R.id.thumbnail_image);
             }
 
             // On clicking a reminder item

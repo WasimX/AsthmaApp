@@ -46,8 +46,6 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
     private EditText editTextEmail;
     private EditText editTextPassword;
     private TextView textViewResetPW;
-    private TextView user_name;
-    private TextView email;
 
     //firebase auth object
     private FirebaseAuth firebaseAuth;
@@ -58,26 +56,24 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        //getting firebase auth object
+        firebaseAuth = FirebaseAuth.getInstance();
+
+        //if the objects getcurrentuser method is not null
+        //means user is already logged in
+        if (firebaseAuth.getCurrentUser() != null) {
+            //close this activity
+            finish();
+            //opening profile activity
+            startActivity(new Intent(getApplicationContext(), NavigationActivity.class));
+        }
+
         //initializing views
         editTextEmail = findViewById(R.id.editTextEmail);
         editTextPassword = findViewById(R.id.editTextPassword);
         buttonSignIn = findViewById(R.id.buttonSignin);
         btnViewSignUp = findViewById(R.id.btnViewSignUp);
         textViewResetPW = findViewById(R.id.textViewResetPW);
-        email = findViewById(R.id.login_email);
-        user_name = findViewById(R.id.login_username);
-
-        //get firebase auth instance
-        firebaseAuth = FirebaseAuth.getInstance();
-
-        //get current user
-        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-        //updateUI(user); --null point error "Todo"
-
-            //close this activity
-            finish();
-            //opening profile activity
-            startActivity(new Intent(getApplicationContext(), NavigationActivity.class));
 
 
         //attaching click listener
@@ -91,6 +87,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
 
         // Button listeners
         findViewById(R.id.signInButton).setOnClickListener(this);
+
 
         // [START config_signin]
         // Configure Google Sign In
@@ -140,8 +137,6 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
                         hideProgressDialog();
                         //if the task is successful
                         if(task.isSuccessful()){
-                            FirebaseUser user = firebaseAuth.getCurrentUser();
-                            updateUI(user);
                             //start the profile activity
                             finish();
                             startActivity(new Intent(getApplicationContext(), NavigationActivity.class));
@@ -153,12 +148,6 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
 
     }
 
-    private void updateUI(FirebaseUser user) {
-
-        email.setText(getString(R.string.google_status_fmt, user.getEmail()));
-        user_name.setText(getString(R.string.firebase_status_fmt, user.getUid()));
-
-    }
     //--------------------------------------- Google Stuff -----------------------------
 
     // [START onactivityresult]
@@ -199,6 +188,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "signInWithCredential:success");
+                            FirebaseUser user = firebaseAuth.getCurrentUser();
                             startActivity(new Intent(LoginActivity.this, NavigationActivity.class));
                         } else {
                             // If sign in fails, display a message to the user.
@@ -243,14 +233,10 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
     protected void onStart() {
         super.onStart();
 
-        FirebaseUser currentUser = firebaseAuth.getCurrentUser();
-
-        if (currentUser != null) {
+        if (firebaseAuth.getCurrentUser() != null) {
             finish();
             startActivity(new Intent(this, NavigationActivity.class));
         }
-
-        updateUI(currentUser);
     }
 
 

@@ -6,10 +6,13 @@
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="32dp"
-        android:text="Information Related to Asthma"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        android:text="@string/about_asthma_body"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -19,7 +22,8 @@
         android:layout_width="160dp"
         android:layout_height="160dp"
         android:layout_marginEnd="8dp"
-        android:background="@null"
+        android:background="@drawable/boarder"
+        android:contentDescription="@string/triggers"
         android:scaleType="centerInside"
         android:src="@drawable/trigger"
         app:layout_constraintBottom_toTopOf="@+id/image_button_moreinfo"
@@ -28,12 +32,13 @@
         app:layout_constraintTop_toBottomOf="@+id/image_button_symptoms" />
 
     <ImageButton
-        android:id="@+id/image_button_important"
+        android:id="@+id/image_button_useful_info"
         android:layout_width="160dp"
         android:layout_height="160dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="96dp"
-        android:background="@null"
+        android:background="@drawable/boarder"
+        android:contentDescription="@string/useful_info"
         android:scaleType="centerInside"
         android:src="@drawable/important"
         app:layout_constraintBottom_toTopOf="@+id/image_button_medication"
@@ -46,22 +51,24 @@
         android:layout_width="160dp"
         android:layout_height="160dp"
         android:layout_marginStart="8dp"
-        android:background="@null"
+        android:background="@drawable/boarder"
+        android:contentDescription="@string/medication"
         android:scaleType="centerInside"
         android:src="@drawable/medication"
         app:layout_constraintBottom_toTopOf="@+id/image_button_moreinfo"
         app:layout_constraintEnd_toStartOf="@+id/image_button_trigger"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/image_button_important" />
+        app:layout_constraintTop_toBottomOf="@+id/image_button_useful_info" />
 
     <ImageButton
         android:id="@+id/image_button_moreinfo"
         android:layout_width="160dp"
         android:layout_height="160dp"
-        android:layout_marginBottom="32dp"
-        android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:background="@null"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/boarder"
+        android:contentDescription="@string/more_info"
         android:scaleType="centerInside"
         android:src="@drawable/more_info"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -72,14 +79,15 @@
         android:id="@+id/image_button_symptoms"
         android:layout_width="160dp"
         android:layout_height="160dp"
-        android:layout_marginEnd="8dp"
         android:layout_marginTop="96dp"
-        android:background="@null"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/boarder"
+        android:contentDescription="@string/symptoms"
         android:scaleType="centerInside"
         android:src="@drawable/symptoms"
         app:layout_constraintBottom_toTopOf="@+id/image_button_trigger"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/image_button_important"
+        app:layout_constraintStart_toEndOf="@+id/image_button_useful_info"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
 

@@ -26,7 +26,7 @@ public class About_Asthma_Fragment extends Fragment implements View.OnClickListe
         View rootview = inflater.inflate(R.layout.activity_about_asthma, container, false);
 
         image_button_trigger = rootview.findViewById(R.id.image_button_trigger);
-        image_button_important = rootview.findViewById(R.id.image_button_important);
+        image_button_important = rootview.findViewById(R.id.image_button_useful_info);
         image_button_medication = rootview.findViewById(R.id.image_button_medication);
         image_button_moreinfo = rootview.findViewById(R.id.image_button_moreinfo);
         image_button_symptoms = rootview.findViewById(R.id.image_button_symptoms);
