@@ -153,6 +153,7 @@
     London,\n
     E1 8AA.
     </string>
+
     <string name="cu_date_time">Monday to Friday 9am to 5pm</string>
     <string name="cu_asthma_no">0300 222 5800</string>
     <string name="cu_email">By email:</string>
@@ -173,7 +174,7 @@
     <string name="symptoms">Symptoms</string>
 
 
-    <!-- Action Plan-->
+    <!-- Action Plan -->
     <string name="title_activity_action__plan">Action_Plan</string>
     <string name="tab_text_1">Tab 1</string>
     <string name="tab_text_2">Tab 2</string>
@@ -186,7 +187,90 @@
     <string name="on">On</string>
     <string name="time_icon">Time Icon</string>
     <string name="repeat_icon">Repeat Icon</string>
-    <string name="repear_inteval">Repear Inteval</string>
+    <string name="repeat_interval">Repeat Interval</string>
     <string name="repeat_period">Repeat Period</string>
+
+    <!-- First Aid -->
+    <string name="em_title">Asthma Attack</string>
+    <string name="em_subheading">
+        Follow this emergency advice if you\'re having an asthma attack.
+    </string>
+
+    <string name="em_steps">
+        <b>Step 1</b> - Sit the person upright - try to keep them calm and reassuring.\n\n
+        <b>Step 2</b> - Take one puff of your reliever inhaler (usually blue) every 30-60 up to 10 puffs.\n\n
+        <b>Step 3</b> - If you feel worse at any point OR you don\'t fell better after 10 puffs <red>call 999 for an ambulance</red>.\n\n
+        <b>Step 4</b> - Repeat step 2 after 15 minutes while you\'re waiting for an ambulance.
+    </string>
+    
+    <string name="call_emergency">
+        <b>Call emergency assistance immediately (Dial 999) if …\n\n</b>
+        - If the person is not breathing\n\n
+        - If the person\'s Asthma suddenly becomes worse, or is not improving\n\n
+        - If the person is having an asthma attack and a reliever is not available\n\n
+        - if you are not sure if it\'s asthma\n\n
+        - if the person is known to Anaphylaxis - Follow Anaphylaxis Action Plan,
+        then give Asthma First Aid (Blue/Grey reliever medication is unlikely to harm, even if the person does not have asthma)
+    </string>
+
+
+    <!-- Symptoms Info -->
+    <string name="symptoms_info">
+        If you have asthma, your airways (breathing tubes) are usually inflamed all the time, not just when you have symptoms.
+        Mucus can block the inside of your airways as well. Sometimes your airways tighten up as well… so there is less space to breathe through,
+        and that\'s what leads to asthma symptoms!
+    </string>
+    
+    <string name="common_symptoms">
+        <b>Common symptoms:</b>\n
+        - Wheezing\n
+        - Cough\n
+        - Chest tightness\n
+        - Phlegm/Mucus\n
+        - Shortness of breath\n
+        - Chest pains
+    </string>
+
+    <string name="symptoms_info2">
+        Its important to track your symptoms! Keep an eye out, as its a good indication of how well your asthma is controlled. 
+    </string>
+
+    <string name="manage_symptoms">
+        <b>Managing symptoms</b>\n
+        Know what you specific symptoms and triggers are. If symptoms are not getting better, see your doctor to help you find a better way to control them!
+        And make sure you have a current asthma action plan! it will help you know what you are doing well, and what you need to get help with.
+    </string>
+
+
+
+    <!-- Medication -->
+    <string name="medi">Medication</string>
+
+    <string name="medi_intro">
+        Medication is needed to manage your asthma. Most medications for asthma are inhaled through your mouth using a puffer (inhaler).
+        There are different kinds of medication in the puffers and different kinds of puffer devices.
+        The main two kinds of medication are called relievers and preventers, and they work in different ways.
+    </string>
+
+    <string name="reliever_inhaler">
+        <b>Reliever Inhalers</b>\n
+        Relievers act quickly, in as little as 4 minutes, to help relive you symptoms. Examples are Ventolin,Asmol and Bricanyl.
+        Everyone with asthma needs to have a reliever puffer for when they have symptoms, or if a doctor has told them to use it
+        before exercise.
+    </string>
+    <string name="preventer_inhaler">
+        <b>Preventer Inhaler</b>
+        Preventers are taken everyday to help your asthma symptoms and flare-ups. They do this by reducing inflammation in your airways.
+        Examples are Pulmicort and Flixoride. If you are using your preventer, your doctor will prescribe the lowest strength of medication
+        that works to manage your asthma. Talk to your doctor about the choices that are available for you asthma treatment.
+    </string>
+
+
+
+
+
+
+
+
 
 </resources>
