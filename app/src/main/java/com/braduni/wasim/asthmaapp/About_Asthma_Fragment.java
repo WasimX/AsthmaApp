@@ -32,7 +32,6 @@ public class About_Asthma_Fragment extends Fragment implements View.OnClickListe
         image_button_trigger .setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                test trigger  = new test();
                 FragmentManager manager = getFragmentManager();
                 manager.beginTransaction().replace(R.id.fragment_container, new TriggerActivity()).commit();
             }

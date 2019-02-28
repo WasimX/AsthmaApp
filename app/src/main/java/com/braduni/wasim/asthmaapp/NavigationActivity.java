@@ -2,6 +2,7 @@ package com.braduni.wasim.asthmaapp;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -10,12 +11,23 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 
 public class NavigationActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    private FirebaseAuth auth;
+    private TextView txtName, txtEmail;
+    private View navHeader;
+    private ImageView imageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,11 +47,41 @@ public class NavigationActivity extends AppCompatActivity
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+        navHeader = navigationView.getHeaderView(0);
+        imageView = (ImageView) navHeader.findViewById(R.id.user_photo);
+        txtName = (TextView) navHeader.findViewById(R.id.login_username);
+        txtEmail = (TextView) navHeader.findViewById(R.id.login_email);
+
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                     new Home_Fragment()).commit();
             navigationView.setCheckedItem(R.id.nav_home);
         }
+
+        // load nav menu header data
+        auth = FirebaseAuth.getInstance();
+            FirebaseUser user = auth.getCurrentUser();
+            loadNavHeader(user);
+
+
+    }
+
+    private void loadNavHeader(FirebaseUser user) {
+        // name, email, picture
+        txtName.setText(user.getDisplayName());
+        txtEmail.setText(user.getEmail());
+        String imgurl = user.getPhotoUrl().toString();
+
+
+
+        // Loading profile image
+        Glide.with(this).load(imgurl)
+                .crossFade()
+                .thumbnail(0.5f)
+                .bitmapTransform(new CircleTransform(this))
+                .diskCacheStrategy(DiskCacheStrategy.ALL)
+                .into(imageView);
+
     }
 
     @Override

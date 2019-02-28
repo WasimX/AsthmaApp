@@ -19,7 +19,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/Q1"
+                android:id="@+id/textView11"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
@@ -31,6 +31,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <RadioGroup
+                android:id="@+id/Q1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:checkedButton="1">
@@ -46,7 +47,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/Q1" />
+                    app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
                 <RadioButton
                     android:id="@+id/q1_2"
