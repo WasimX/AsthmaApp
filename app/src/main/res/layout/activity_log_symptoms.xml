@@ -34,8 +34,7 @@
             <RadioGroup
                 android:id="@+id/Q1"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:checkedButton="1">
+                android:layout_height="match_parent">
 
                 <RadioButton
                     android:id="@+id/q1_1"
@@ -114,8 +113,7 @@
             <RadioGroup
                 android:id="@+id/Q2"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:checkedButton="1">
+                android:layout_height="match_parent">
 
                 <RadioButton
                     android:id="@+id/q2_1"
@@ -193,8 +191,7 @@
             <RadioGroup
                 android:id="@+id/Q3"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:checkedButton="1">
+                android:layout_height="match_parent">
 
                 <RadioButton
                     android:id="@+id/q3_1"
@@ -259,7 +256,7 @@
             </RadioGroup>
 
             <MultiAutoCompleteTextView
-                android:id="@+id/ad_notes"
+                android:id="@+id/add_notes"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
