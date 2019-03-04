@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    >
 
     <ScrollView
         android:layout_width="match_parent"
@@ -273,6 +274,7 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginTop="32dp"
                 android:layout_marginRight="8dp"
+                android:onClick="RadioButtonClicked"
                 android:text="@string/save" />
         </LinearLayout>
     </ScrollView>
