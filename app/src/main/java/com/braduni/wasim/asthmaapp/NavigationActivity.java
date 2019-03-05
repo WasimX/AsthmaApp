@@ -129,21 +129,21 @@ public class NavigationActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_home) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Home_Fragment()).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Home_Fragment()).addToBackStack(null).commit();
         } else if (id == R.id.nav_log_symptoms) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Log_Symptoms_Fragment()).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Log_Symptoms_Fragment()).addToBackStack(null).commit();
         } else if (id == R.id.nav_history) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new History_Fragment()).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new History_Fragment()).addToBackStack(null).commit();
         } else if (id == R.id.nav_reminder) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Reminder_Fragment()).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Reminder_Fragment()).addToBackStack(null).commit();
         } else if (id == R.id.nav_em_support) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Em_Support_Fragment()).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Em_Support_Fragment()).addToBackStack(null).commit();
         } else if (id == R.id.nav_profile) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Profile_Fragment()).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Profile_Fragment()).addToBackStack(null).commit();
         } else if (id == R.id.nav_about) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new About_Asthma_Fragment()).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new About_Asthma_Fragment()).addToBackStack(null).commit();
         } else if (id == R.id.contact_us) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Contact_us_Fragment()).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Contact_us_Fragment()).addToBackStack(null).commit();
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);

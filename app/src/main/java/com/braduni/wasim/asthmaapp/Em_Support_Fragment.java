@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,13 +37,13 @@ public class Em_Support_Fragment extends Fragment implements View.OnClickListene
     public void onClick(View v) {
 
         if (v == image_button_AFA) {
-            //Toast.makeText(getContext(), "test", Toast.LENGTH_SHORT).show();
-            startActivity(new Intent(getActivity(), FirstAidActivity.class));
+            FragmentManager manager = getFragmentManager();
+            manager.beginTransaction().replace(R.id.fragment_container, new FirstAidActivity()).addToBackStack(null).commit();
         }
 
         if (v == image_button_VAP) {
-            // Toast.makeText(getContext(), "test", Toast.LENGTH_SHORT).show();
-            startActivity(new Intent(getActivity(), ActionPlanActivity.class));
+            FragmentManager manager = getFragmentManager();
+            manager.beginTransaction().replace(R.id.fragment_container, new ActionPlanActivity()).addToBackStack(null).commit();
         }
     }
 }

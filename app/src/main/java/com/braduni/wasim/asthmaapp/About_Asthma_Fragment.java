@@ -29,13 +29,7 @@ public class About_Asthma_Fragment extends Fragment implements View.OnClickListe
         image_button_moreinfo = v.findViewById(R.id.image_button_moreinfo);
         image_button_symptoms = v.findViewById(R.id.image_button_symptoms);
 
-        image_button_trigger .setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                FragmentManager manager = getFragmentManager();
-                manager.beginTransaction().replace(R.id.fragment_container, new TriggerActivity()).commit();
-            }
-        });
+        image_button_trigger.setOnClickListener(this);
         image_button_medication.setOnClickListener(this);
         image_button_moreinfo .setOnClickListener(this);
         image_button_symptoms .setOnClickListener(this);
@@ -47,20 +41,23 @@ public class About_Asthma_Fragment extends Fragment implements View.OnClickListe
     public void onClick(View v) {
 
         if( v == image_button_trigger) {
-            startActivity(new Intent(getActivity(), TriggerActivity.class));
+            FragmentManager manager = getFragmentManager();
+            manager.beginTransaction().replace(R.id.fragment_container, new TriggerActivity()).addToBackStack(null).commit();
         }
 
         if ( v == image_button_medication) {
-            startActivity(new Intent(getActivity(), MedicationActivity.class));
+            FragmentManager manager = getFragmentManager();
+            manager.beginTransaction().replace(R.id.fragment_container, new MedicationActivity()).addToBackStack(null).commit();
         }
 
         if ( v == image_button_moreinfo) {
-            startActivity(new Intent(getActivity(), More_infoActivity.class));
+            FragmentManager manager = getFragmentManager();
+            manager.beginTransaction().replace(R.id.fragment_container, new More_infoActivity()).addToBackStack(null).commit();
         }
 
         if ( v == image_button_symptoms) {
-
-            startActivity(new Intent(getActivity(), Symptoms_infoActivity.class));
+            FragmentManager manager = getFragmentManager();
+            manager.beginTransaction().replace(R.id.fragment_container, new Symptoms_infoActivity()).addToBackStack(null).commit();
         }
     }
 }

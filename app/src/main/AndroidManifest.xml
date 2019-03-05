@@ -13,9 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
-        <activity
-            android:name=".LogSymptomsDatabase"
-            android:label="@string/title_activity_log_symptoms_database"></activity>
+
         <activity
             android:name=".LoginActivity"
             android:label="@string/app_name">
@@ -34,13 +32,6 @@
         <activity android:name=".BaseActivity" />
         <activity android:name=".ReminderAddActivity" />
         <activity android:name=".ReminderEditActivity" />
-        <activity android:name=".ActionPlanActivity" />
-        <activity android:name=".FirstAidActivity" />
-        <activity android:name=".More_infoActivity" />
-        <activity android:name=".TriggerActivity" />
-        <activity android:name=".MedicationActivity" />
-        <activity android:name=".Symptoms_infoActivity" />
-
         <receiver android:name=".BootReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
