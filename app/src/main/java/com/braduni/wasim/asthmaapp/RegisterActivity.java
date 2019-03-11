@@ -1,8 +1,9 @@
 package com.braduni.wasim.asthmaapp;
 
+
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
@@ -64,6 +65,7 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
             return;
         }
 
+
         showProgressDialog();
 
         mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -92,11 +94,13 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
         if( v == buttonRegister) {
             registerUser();
         }
-
         if (v == textViewSignin){
             finish();
             startActivity(new Intent(this, LoginActivity.class));
+
+
         }
     }
-}
 
+
+}

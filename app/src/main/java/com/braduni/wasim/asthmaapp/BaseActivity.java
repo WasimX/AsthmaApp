@@ -1,8 +1,8 @@
 package com.braduni.wasim.asthmaapp;
 
 import android.app.ProgressDialog;
-import android.support.annotation.VisibleForTesting;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.VisibleForTesting;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class BaseActivity extends AppCompatActivity {
 

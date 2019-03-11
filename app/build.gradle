@@ -8,7 +8,7 @@ android {
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
@@ -16,35 +16,54 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
 }
 
 dependencies {
-    def nav_version = "1.0.0-rc02"
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'com.android.support:appcompat-v7:28.0.0'
-    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
-    implementation 'com.android.support:design:28.0.0'
+    implementation 'androidx.appcompat:appcompat:1.0.0-beta01'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'com.google.android.material:material:1.0.0-beta01'
     implementation 'com.google.firebase:firebase-core:16.0.7'
     implementation 'com.google.firebase:firebase-auth:16.1.0'
-    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     implementation 'com.firebaseui:firebase-ui-auth:4.3.1'
     implementation 'com.google.android.gms:play-services-auth:16.0.1'
-    implementation 'com.android.support:recyclerview-v7:28.0.0'
-    implementation "android.arch.navigation:navigation-fragment:$nav_version" // use -ktx for Kotlin
-    implementation "android.arch.navigation:navigation-ui:$nav_version" // use -ktx for Kotlin
-    implementation 'com.android.support:support-v13:28.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0-beta01'
+    implementation "android.arch.navigation:navigation-fragment:1.0.0-rc02" // use -ktx for Kotlin
+    implementation "android.arch.navigation:navigation-ui:1.0.0-rc02" // use -ktx for Kotlin
+    implementation 'androidx.legacy:legacy-support-v13:1.0.0-beta01'
     implementation 'com.getbase:floatingactionbutton:1.9.0'
     implementation 'com.wdullaer:materialdatetimepicker:1.2.1'
     implementation 'com.bignerdranch.android:recyclerview-multiselect:+'
     implementation 'com.wrapp.floatlabelededittext:library:0.0.6'
     implementation 'com.amulyakhare:com.amulyakhare.textdrawable:1.0.1'
     implementation 'com.github.bumptech.glide:glide:3.8.0'
+    implementation 'androidx.appcompat:appcompat:1.0.0-beta01'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0-beta01'
+    implementation 'io.paperdb:paperdb:2.6'
+    implementation 'com.applandeo:material-calendar-view:1.5.1'
+    implementation 'com.github.prolificinteractive:material-calendarview:2.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation "androidx.room:room-runtime:2.1.0-alpha04"
 
     testImplementation 'junit:junit:4.12'
 
-    androidTestImplementation 'com.android.support.test:runner:1.0.2'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-    androidTestImplementation 'com.android.support.test:rules:1.0.2'
+    androidTestImplementation 'androidx.test:runner:1.1.0-alpha4'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0-alpha4'
+    androidTestImplementation 'androidx.test:rules:1.1.0-alpha4'
+    androidTestImplementation 'androidx.test:runner:1.1.0-alpha4'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0-alpha4'
+
+    annotationProcessor "androidx.room:room-compiler:2.1.0-alpha04"
+
 }
 
 apply plugin: 'com.google.gms.google-services'
+android.defaultConfig.vectorDrawables.useSupportLibrary = true

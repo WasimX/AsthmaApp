@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.Log">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -20,19 +20,19 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView11"
+                android:id="@+id/log_q1_txt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
-                android:text="@string/Q1"
+                android:text="Which Symptoms did you have today?"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <RadioGroup
-                android:id="@+id/Q1"
+                android:id="@+id/RG_Q1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
@@ -43,11 +43,11 @@
                     android:layout_marginLeft="8dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginRight="8dp"
-                    android:text="@string/wheezing"
+                    android:text="wheezing"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView11" />
+                    app:layout_constraintTop_toBottomOf="@+id/log_q1_txt" />
 
                 <RadioButton
                     android:id="@+id/q1_2"
@@ -55,7 +55,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8dp"
                     android:layout_marginRight="8dp"
-                    android:text="@string/phlegm_mucus"
+                    android:text="phlegm_mucus"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
@@ -67,7 +67,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8dp"
                     android:layout_marginRight="8dp"
-                    android:text="@string/coughing"
+                    android:text="coughing"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="@+id/q1_1"
@@ -79,7 +79,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8dp"
                     android:layout_marginRight="8dp"
-                    android:text="@string/difficulties_breathing"
+                    android:text="difficulties_breathing"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
@@ -91,27 +91,27 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8dp"
                     android:layout_marginRight="8dp"
-                    android:text="@string/difficulties_sleeping"
+                    android:text="difficulties_sleeping"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/q1_4" />
             </RadioGroup>
 
             <TextView
-                android:id="@+id/textView12"
+                android:id="@+id/log_q2_txt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
                 android:layout_marginTop="32dp"
                 android:layout_marginRight="8dp"
-                android:text="@string/Q2"
+                android:text="How was your asthma symptoms overall?"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/q1_5" />
 
             <RadioGroup
-                android:id="@+id/Q2"
+                android:id="@+id/RG_Q2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
@@ -122,11 +122,11 @@
                     android:layout_marginLeft="8dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginRight="8dp"
-                    android:text="@string/bad"
+                    android:text="bad"
                     app:layout_constraintBottom_toTopOf="@+id/q2_2"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView12"
+                    app:layout_constraintTop_toBottomOf="@+id/log_q2_txt"
                     app:layout_constraintVertical_chainStyle="spread_inside" />
 
                 <RadioButton
@@ -135,7 +135,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8dp"
                     android:layout_marginRight="8dp"
-                    android:text="@string/not_good"
+                    android:text="not_good"
                     app:layout_constraintBottom_toTopOf="@+id/q2_3"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -147,7 +147,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8dp"
                     android:layout_marginRight="8dp"
-                    android:text="@string/good"
+                    android:text="good"
                     app:layout_constraintBottom_toTopOf="@+id/q2_4"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -159,7 +159,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8dp"
                     android:layout_marginRight="8dp"
-                    android:text="@string/very_good"
+                    android:text="very_good"
                     app:layout_constraintBottom_toTopOf="@+id/q2_5"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -171,98 +171,12 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8dp"
                     android:layout_marginRight="8dp"
-                    android:text="@string/excellent"
+                    android:text="excellent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/q2_4" />
             </RadioGroup>
 
-            <TextView
-                android:id="@+id/textView13"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="32dp"
-                android:layout_marginRight="8dp"
-                android:text="@string/Q3"
-                tools:layout_editor_absoluteX="124dp"
-                tools:layout_editor_absoluteY="558dp" />
-
-            <RadioGroup
-                android:id="@+id/Q3"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <RadioButton
-                    android:id="@+id/q3_1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginRight="8dp"
-                    android:text="@string/bad"
-                    app:layout_constraintBottom_toTopOf="@+id/q2_2"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView12"
-                    app:layout_constraintVertical_chainStyle="spread_inside" />
-
-                <RadioButton
-                    android:id="@+id/q3_2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="8dp"
-                    android:text="@string/not_good"
-                    app:layout_constraintBottom_toTopOf="@+id/q2_3"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/q2_1" />
-
-                <RadioButton
-                    android:id="@+id/q3_3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="8dp"
-                    android:text="@string/good"
-                    app:layout_constraintBottom_toTopOf="@+id/q2_4"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/q2_2" />
-
-                <RadioButton
-                    android:id="@+id/q3_4"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="8dp"
-                    android:text="@string/very_good"
-                    app:layout_constraintBottom_toTopOf="@+id/q2_5"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/q2_3" />
-
-                <RadioButton
-                    android:id="@+id/q3_5"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="8dp"
-                    android:text="@string/excellent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/q2_4" />
-            </RadioGroup>
-
-            <MultiAutoCompleteTextView
-                android:id="@+id/add_notes"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="32dp"
-                android:layout_marginRight="8dp"
-                android:hint="@string/additional_notes" />
 
             <Button
                 android:id="@+id/btn_save"
@@ -271,9 +185,9 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginTop="32dp"
                 android:layout_marginRight="8dp"
-                android:onClick="RadioButtonClicked"
-                android:text="@string/save" />
+                android:text="save" />
         </LinearLayout>
     </ScrollView>
 
-</android.support.constraint.ConstraintLayout>
+
+</FrameLayout>

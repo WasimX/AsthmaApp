@@ -9,6 +9,7 @@
     <application
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:name=".databaseini"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
@@ -32,6 +33,7 @@
         <activity android:name=".BaseActivity" />
         <activity android:name=".ReminderAddActivity" />
         <activity android:name=".ReminderEditActivity" />
+
         <receiver android:name=".BootReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
