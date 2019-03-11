@@ -214,6 +214,17 @@
         that works to manage your asthma. Talk to your doctor about the choices that are available for you asthma treatment.
     </string>
 
+
+    <string name="textview">TextView</string>
+    <string name="bin_pic">bin_pic</string>
+    <string name="letter_icon">letter_icon</string>
+    <string name="alarm_active">alarm_active</string>
+    <string name="forgot_your_password">Forgot your password?</string>
+    <string name="to_reset_password_enter_your_email_press_the_button_and_check_mail_to_follow_instruction">To reset password, enter your email, press the button and check mail to follow instruction.</string>
+    <string name="your_email_here">Your email here</string>
+    <string name="back">BACK</string>
+    <string name="register_an_account">Register an account</string>
+
     <!-- TODO: Remove or change this placeholder text -->
 
 

@@ -122,15 +122,15 @@ public class Log_Symptoms_Fragment extends Fragment {
     private int getColor() {
         switch (q2_group.indexOfChild(itemView.findViewById(q2_group.getCheckedRadioButtonId()))) {
             case 0:
-                return Color.BLUE;
+                return Color.rgb(255,105,97); //bad
             case 1:
-                return  Color.RED;
+                return  Color.rgb(255, 179, 71); //not good
             case 2:
-                return Color.GREEN;
+                return Color.rgb(253, 253, 150); //good
             case 3:
-                return Color.YELLOW;
+                return Color.rgb(97, 255, 184); // very good
             case 4:
-                return Color.MAGENTA;
+                return Color.rgb(119, 221, 119); //excellent
             default:
                 return Color.BLACK;
         }
