@@ -25,10 +25,6 @@
             android:icon="@drawable/ic_local_hospital_black_24dp"
             android:title="@string/navi_emergency_support" />
         <item
-            android:id="@+id/nav_profile"
-            android:icon="@drawable/ic_account_box_black_24dp"
-            android:title="@string/navi_profile" />
-        <item
             android:id="@+id/nav_about"
             android:icon="@drawable/ic_info_outline_black_24dp"
             android:title="@string/navi_about_asthma" />

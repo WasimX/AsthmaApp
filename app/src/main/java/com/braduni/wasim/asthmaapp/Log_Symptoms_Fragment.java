@@ -1,6 +1,5 @@
 package com.braduni.wasim.asthmaapp;
 
-import android.annotation.SuppressLint;
 import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -20,11 +19,11 @@ import java.util.Map;
 
 
 
-//This fragment is for showing the question to user and then asks for the user fedback
+//This fragment is for showing the question to user and then asks for the user feedback
 public class Log_Symptoms_Fragment extends Fragment {
 
-    RadioGroup q1_group, q2_group;
-    TextView q1_txt, q2_txt;
+    RadioGroup q1_group, q2_group, q3_group, q4_group, q5_group;
+    TextView q1_txt, q2_txt, q3_txt, q4_txt, q5_txt;
     Button save;
 
     public Log_Symptoms_Fragment() {
@@ -60,9 +59,15 @@ public class Log_Symptoms_Fragment extends Fragment {
     private void initViews() {
         q1_group = itemView.findViewById(R.id.RG_Q1);
         q2_group = itemView.findViewById(R.id.RG_Q2);
+        q3_group = itemView.findViewById(R.id.RG_Q3);
+        q4_group = itemView.findViewById(R.id.RG_Q4);
+        q5_group = itemView.findViewById(R.id.RG_Q5);
 
         q1_txt = itemView.findViewById(R.id.log_q1_txt);
         q2_txt = itemView.findViewById(R.id.log_q2_txt);
+        q3_txt = itemView.findViewById(R.id.log_q3_txt);
+        q4_txt = itemView.findViewById(R.id.log_q4_txt);
+        q5_txt = itemView.findViewById(R.id.log_q5_txt);
 
         save = itemView.findViewById(R.id.btn_save);
 
@@ -88,7 +93,7 @@ public class Log_Symptoms_Fragment extends Fragment {
         //It is called when the work on the worker thread completes
         @Override
         protected void onPostExecute(Void Void) {
-            showToast("Record Added Successfully");
+            showToast();
         }
     };
 
@@ -120,7 +125,7 @@ public class Log_Symptoms_Fragment extends Fragment {
     //This method checks which answer is selected
     //So i will ask the radio group which index is selected and based on  it i will save the color
     private int getColor() {
-        switch (q2_group.indexOfChild(itemView.findViewById(q2_group.getCheckedRadioButtonId()))) {
+        switch (q5_group.indexOfChild(itemView.findViewById(q5_group.getCheckedRadioButtonId()))) {
             case 0:
                 return Color.rgb(255,105,97); //bad
             case 1:
@@ -139,22 +144,24 @@ public class Log_Symptoms_Fragment extends Fragment {
     //Map saves data in a key value pair which is efficient way of saving data
     //Also using map i can get what user have selected in response to a question
     private Map<String, String> getMap() {
-
         RadioButton radioButton_1_selected = itemView.findViewById(q1_group.getCheckedRadioButtonId());
         RadioButton radioButton_2_selected = itemView.findViewById(q2_group.getCheckedRadioButtonId());
+        RadioButton radioButton_3_selected = itemView.findViewById(q2_group.getCheckedRadioButtonId());
+        RadioButton radioButton_4_selected = itemView.findViewById(q2_group.getCheckedRadioButtonId());
+        RadioButton radioButton_5_selected = itemView.findViewById(q2_group.getCheckedRadioButtonId());
 
         Map<String, String> map = new HashMap<>();
         map.put(q1_txt.getText().toString(), radioButton_1_selected.getText().toString());
         map.put(q2_txt.getText().toString(), radioButton_2_selected.getText().toString());
+        map.put(q3_txt.getText().toString(), radioButton_3_selected.getText().toString());
+        map.put(q4_txt.getText().toString(), radioButton_4_selected.getText().toString());
+        map.put(q5_txt.getText().toString(), radioButton_5_selected.getText().toString());
         return map;
 
     }
 
     //This shows message to  the user
-    private  void showToast(String record_added_successfully) {
-        Toast.makeText(itemView.getContext(), record_added_successfully, Toast.LENGTH_SHORT).show();
+    private  void showToast() {
+        Toast.makeText(itemView.getContext(), "Record Added Successfully", Toast.LENGTH_SHORT).show();
     }
-
-
-
 }

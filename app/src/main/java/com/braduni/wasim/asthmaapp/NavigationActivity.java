@@ -106,10 +106,6 @@ public class NavigationActivity extends AppCompatActivity
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
         if (id == R.id.action_logout) {
 
             FirebaseAuth.getInstance().signOut();
@@ -136,9 +132,7 @@ public class NavigationActivity extends AppCompatActivity
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Reminder_Fragment()).addToBackStack(null).commit();
         } else if (id == R.id.nav_em_support) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Em_Support_Fragment()).addToBackStack(null).commit();
-        } else if (id == R.id.nav_profile) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Profile_Fragment()).addToBackStack(null).commit();
-        } else if (id == R.id.nav_about) {
+        }  else if (id == R.id.nav_about) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new About_Asthma_Fragment()).addToBackStack(null).commit();
         } else if (id == R.id.contact_us) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Contact_us_Fragment()).addToBackStack(null).commit();
