@@ -22,7 +22,6 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-
 public class History_Fragment extends Fragment {
 
     View itemViews;
@@ -44,7 +43,6 @@ public class History_Fragment extends Fragment {
         return itemViews;
     }
 
-
     //We  need to get data asynchronously so that the UI thread doesn't gets blocked
     private void getData() {
         new GetAllData().execute();
@@ -63,12 +61,10 @@ public class History_Fragment extends Fragment {
         calendarView = itemViews.findViewById(R.id.history_calendar);
         calendarView.setOnDayClickListener(new OnDayClickListener() {
 
-
             //When the user clicks on any date this method will call
             @Override
             public void onDayClick(EventDay eventDay) {
                 eventDay.getCalendar().getTime();
-
 
                 //This method gets the record against the data picked by the user
                 new GetSpecificData().execute(eventDay.getCalendar().getTime());
@@ -77,8 +73,6 @@ public class History_Fragment extends Fragment {
 
 
     }
-
-
 
     //This method gets the record against the date user picked
 
@@ -130,13 +124,10 @@ public class History_Fragment extends Fragment {
                 Calendar calendar = Calendar.getInstance();
                 calendar.set(Integer.parseInt(splitter[2]), Integer.parseInt(splitter[1])-1, Integer.parseInt(splitter[0]));
 
-
                 //Makes the color against the record data
                 ColorDrawable colorDrawable = new ColorDrawable(logRecord.getColor());
                 //Adds the color and the date to show the user
                 events.add(new EventDay(calendar, colorDrawable));
-                //materialCalendarView.setDateSelected(CalendarDay.from(calendar.get(Calendar.YEAR),
-                // calendar.get(Calendar.MONTH)+1, calendar.get(Calendar.DAY_OF_MONTH)), true);
             }
 
 
@@ -150,12 +141,9 @@ public class History_Fragment extends Fragment {
             return date.split("-");
         }
 
-
         //This will show dates to user
         @Override
         protected void onPostExecute(List<EventDay> events) {
-
-
             calendarView.setEvents(events);
         }
     }

@@ -20,7 +20,6 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_desc">Navigation header</string>
-    <string name="action_settings">Settings</string>
     <string name="navi_username">Navi_Username</string>
     <string name="navi_useremail">Navi_UserEmail</string>
     <string name="navi_home">Home</string>
@@ -28,7 +27,6 @@
     <string name="navi_history">History</string>
     <string name="navi_reminders">Reminders</string>
     <string name="navi_about_asthma">About Asthma</string>
-    <string name="navi_profile">Profile</string>
     <string name="navi_emergency_support">Emergency Support</string>
     <string name="navi_contact_us">Contact Us</string>
 
@@ -111,7 +109,6 @@
     E1 8AA.
     </string>
 
-    <string name="cu_date_time">Monday to Friday 9am to 5pm</string>
     <string name="cu_asthma_no">0300 222 5800</string>
     <string name="cu_email">By email:</string>
     <string name="cu_post_body">By post: You can write to us at:</string>
@@ -225,6 +222,38 @@
     <string name="back">BACK</string>
     <string name="register_an_account">Register an account</string>
     <string name="em_bodytext1">If you\'re having asthma symptoms, it can be difficult to know whether you need to make an appointment to see your GP or whether it\'s time to dial 999 for an ambulance.</string>
+
+
+    <!-- Log symptoms -->
+    <string name="Question_1">How much of the time has your asthma kept you from getting as much done at work, school or home?</string>
+    <string name="Question_2">How often have you had shortness of breath?</string>
+    <string name="Question_3">How often have your asthma symptoms (wheezing, coughing, shortness of breath, chest tightness or pain) woken you up at night or earlier than usual in the morning?</string>
+    <string name="Question_4">How often have you used your rescue inhaler or nebuliser medication?</string>
+    <string name="Question_5">How would you rate your asthma control?</string>
+    <string name="all_of_the_time">All of the time</string>
+    <string name="most_of_the_time">Most of the time</string>
+    <string name="some_of_the_time">Some of the time</string>
+    <string name="a_little_of_the_time">A little of the time</string>
+    <string name="not_controlled_at_all">Not controlled at all</string>
+    <string name="poorly_controlled">Poorly controlled</string>
+    <string name="somewhat_controlled">Somewhat controlled</string>
+    <string name="completely_controlled">Completely controlled</string>
+    <string name="well_controlled">Well controlled</string>
+    <string name="once">Once</string>
+    <string name="twice">Twice</string>
+    <string name="three">Three</string>
+    <string name="four_times">Four times +</string>
+    <string name="not_at_all">Not at all</string>
+    <string name="save">save</string>
+    <string name="code_green">Code Green</string>
+    <string name="code_yellow">Code Yellow</string>
+    <string name="code_red">Code Red</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <!-- Action plan -->
 
     <!-- TODO: Remove or change this placeholder text -->
 

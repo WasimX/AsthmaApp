@@ -73,7 +73,6 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/details"
                 android:layout_width="match_parent"
                 android:layout_height="72dp"
                 android:layout_marginStart="72dp"
@@ -83,7 +82,6 @@
                 android:textSize="15sp" />
 
             <RelativeLayout
-                android:id="@+id/date"
                 android:layout_width="match_parent"
                 android:layout_height="72dp"
                 android:background="?android:attr/selectableItemBackground"
@@ -110,7 +108,6 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/date_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/date"
@@ -154,7 +151,6 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/time_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/time"
@@ -171,7 +167,6 @@
             </RelativeLayout>
 
             <RelativeLayout
-                android:id="@+id/repeat"
                 android:layout_width="match_parent"
                 android:layout_height="72dp">
 
@@ -187,7 +182,6 @@
                     android:src="@drawable/ic_sync_grey600_24dp" />
 
                 <LinearLayout
-                    android:id="@+id/repeat_ll"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
@@ -195,7 +189,6 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/repeat_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/repeat"
@@ -225,7 +218,6 @@
             </RelativeLayout>
 
             <RelativeLayout
-                android:id="@+id/RepeatNo"
                 android:layout_width="match_parent"
                 android:layout_height="72dp"
                 android:background="?android:attr/selectableItemBackground"
@@ -252,7 +244,6 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/repeat_no_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/repeat_no"
@@ -269,7 +260,6 @@
             </RelativeLayout>
 
             <RelativeLayout
-                android:id="@+id/RepeatType"
                 android:layout_width="match_parent"
                 android:layout_height="72dp"
                 android:background="?android:attr/selectableItemBackground"
@@ -295,7 +285,6 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/repeat_type_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/repeat_type"

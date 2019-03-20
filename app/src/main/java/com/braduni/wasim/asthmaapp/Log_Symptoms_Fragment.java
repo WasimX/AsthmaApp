@@ -17,8 +17,6 @@ import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
 
-
-
 //This fragment is for showing the question to user and then asks for the user feedback
 public class Log_Symptoms_Fragment extends Fragment {
 
@@ -30,8 +28,6 @@ public class Log_Symptoms_Fragment extends Fragment {
         // Required empty public constructor
     }
 
-
-
     View itemView;
 
     @Override
@@ -39,17 +35,14 @@ public class Log_Symptoms_Fragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
-
         itemView = inflater.inflate(R.layout.activity_log_symptoms, container, false);
         initViews();
         attachClickListeners();
         return itemView;
     }
 
-
     //This attack listener to the save button
     private void attachClickListeners() {
-
 
         save.setOnClickListener(save_btn_click_listener);
     }
@@ -70,16 +63,12 @@ public class Log_Symptoms_Fragment extends Fragment {
         q5_txt = itemView.findViewById(R.id.log_q5_txt);
 
         save = itemView.findViewById(R.id.btn_save);
-
-
     }
-
-
 
     //This block of code works on a separate thread so that the app does not hangs
     //It is advisable that when you save data in database use a worker thread instead of UI thread
 
-    private AsyncTask<LogRecords, Void, Void> save_Asthma_Record_async = new AsyncTask<LogRecords, Void, Void>() {
+    private  AsyncTask<LogRecords, Void, Void> save_Asthma_Record_async = new AsyncTask<LogRecords, Void, Void>() {
 
         //This method will do its work in worker thread
         @Override
@@ -88,7 +77,6 @@ public class Log_Symptoms_Fragment extends Fragment {
             return null;
         }
 
-
         //This method works on main thread/UI Thread
         //It is called when the work on the worker thread completes
         @Override
@@ -96,9 +84,6 @@ public class Log_Symptoms_Fragment extends Fragment {
             showToast();
         }
     };
-
-
-
 
     //Listener for the save button
     //These lines of code will work when the user clicks on a save button
@@ -114,13 +99,9 @@ public class Log_Symptoms_Fragment extends Fragment {
 
         logRecord.setColor(getColor());
 
-
-
         //Sends data to be saved in database using asynchronous operation
         save_Asthma_Record_async.execute(logRecord);
     };
-
-
 
     //This method checks which answer is selected
     //So i will ask the radio group which index is selected and based on  it i will save the color
@@ -146,9 +127,9 @@ public class Log_Symptoms_Fragment extends Fragment {
     private Map<String, String> getMap() {
         RadioButton radioButton_1_selected = itemView.findViewById(q1_group.getCheckedRadioButtonId());
         RadioButton radioButton_2_selected = itemView.findViewById(q2_group.getCheckedRadioButtonId());
-        RadioButton radioButton_3_selected = itemView.findViewById(q2_group.getCheckedRadioButtonId());
-        RadioButton radioButton_4_selected = itemView.findViewById(q2_group.getCheckedRadioButtonId());
-        RadioButton radioButton_5_selected = itemView.findViewById(q2_group.getCheckedRadioButtonId());
+        RadioButton radioButton_3_selected = itemView.findViewById(q3_group.getCheckedRadioButtonId());
+        RadioButton radioButton_4_selected = itemView.findViewById(q4_group.getCheckedRadioButtonId());
+        RadioButton radioButton_5_selected = itemView.findViewById(q5_group.getCheckedRadioButtonId());
 
         Map<String, String> map = new HashMap<>();
         map.put(q1_txt.getText().toString(), radioButton_1_selected.getText().toString());
@@ -157,7 +138,6 @@ public class Log_Symptoms_Fragment extends Fragment {
         map.put(q4_txt.getText().toString(), radioButton_4_selected.getText().toString());
         map.put(q5_txt.getText().toString(), radioButton_5_selected.getText().toString());
         return map;
-
     }
 
     //This shows message to  the user

@@ -45,17 +45,18 @@ public class LogsAdapter extends RecyclerView.Adapter<LogsAdapter.MyViewHolder> 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         LogRecords logRecord = list.get(position);
-        holder.date.setText(logRecord.getDate().toString());
+        holder.date.setText(logRecord.getDate());
 
-        String symptoms = "";
+        StringBuilder symptoms = new StringBuilder();
         //we get all the data from hashmap and convert it into a string and show it to user
         for (Map.Entry entry:logRecord.getMap().entrySet()
              ) {
-            symptoms += String.valueOf(entry.getKey()+"\n");
-            symptoms += String.valueOf(entry.getValue()+"\n");
+            symptoms.append(String.valueOf(entry.getKey() + "\n")); // Question TODO: 19/03/2019
+            symptoms.append(String.valueOf(entry.getValue() + "\n")); // Answer
+            symptoms.append("\n");
         }
 
-        holder.symptoms.setText(symptoms);
+        holder.symptoms.setText(symptoms.toString());
     }
 
     //It tells how many items to show
