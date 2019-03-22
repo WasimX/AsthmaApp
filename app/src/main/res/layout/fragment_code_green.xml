@@ -44,14 +44,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="@string/my_personal_best_peak_flow_is"
+                android:text="@string/pb_peak"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
             <TextView
-                android:id="@+id/textView31"
+                android:id="@+id/best_peak"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -68,16 +68,16 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
-                android:text="@string/my_preventer_inhaler_insert_name_colour"
-                app:layout_constraintBottom_toTopOf="@+id/textView32"
+                android:text="@string/my_preventer_inhaler"
+                app:layout_constraintBottom_toTopOf="@+id/preventer"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
             <TextView
-                android:id="@+id/textView32"
-                android:layout_width="wrap_content"
+                android:id="@+id/preventer"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:text="@string/textview"
@@ -93,10 +93,10 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="8dp"
-                android:text="@string/i_need_to_take_my_preventer_inhaler_every_day_even_when_i_feel_well"
+                android:text="@string/GZ_body_preventer"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView32" />
+                app:layout_constraintTop_toBottomOf="@+id/preventer" />
 
             <TextView
                 android:id="@+id/textView43"
@@ -112,7 +112,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView42" />
 
             <TextView
-                android:id="@+id/textView44"
+                android:id="@+id/m_puff"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -127,21 +127,21 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="@string/puff_s_in_the_morning_and"
-                app:layout_constraintStart_toEndOf="@+id/textView44"
+                android:text="@string/in_morning"
+                app:layout_constraintStart_toEndOf="@+id/m_puff"
                 app:layout_constraintTop_toBottomOf="@+id/textView42" />
 
             <TextView
-                android:id="@+id/textView46"
+                android:id="@+id/textView44"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="@string/puff_s_at_night"
-                app:layout_constraintStart_toEndOf="@+id/textView47"
+                android:text="@string/at_night"
+                app:layout_constraintStart_toEndOf="@+id/n_puff"
                 app:layout_constraintTop_toBottomOf="@+id/textView42" />
 
             <TextView
-                android:id="@+id/textView47"
+                android:id="@+id/n_puff"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -156,37 +156,56 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="8dp"
-                android:text="@string/my_reliever_inhaler_insert_name_colour"
+                android:text="@string/my_reliever_inhaler"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView45" />
 
             <TextView
-                android:id="@+id/textView50"
-                android:layout_width="wrap_content"
+                android:id="@+id/reliever_name"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="@string/i_take_my_reliever_inhaler_only_if_i_need_to_i_take"
+                android:layout_marginEnd="8dp"
+                android:text="@string/textview"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView49" />
 
             <TextView
-                android:id="@+id/textView51"
+                android:id="@+id/textView50"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="16dp"
                 android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:text="@string/GZ_body3"
+                app:layout_constraintEnd_toStartOf="@+id/reliever_puff"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/reliever_name" />
+
+            <TextView
+                android:id="@+id/reliever_puff"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="5dp"
                 android:text="@string/textview"
+                app:layout_constraintBottom_toTopOf="@+id/textView52"
                 app:layout_constraintStart_toEndOf="@+id/textView50"
-                app:layout_constraintTop_toBottomOf="@+id/textView49" />
+                app:layout_constraintTop_toBottomOf="@+id/reliever_name" />
 
             <TextView
                 android:id="@+id/textView52"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="90dp"
                 android:layout_marginStart="8dp"
-                android:text="@string/puff_s_of_my_reliever_inhaler_if_any_of_these_things_happen_i_m_wheezing_my_chest_feels_tight_i_m_finding_it_hard_to_breathe_i_m_coughing"
+                android:layout_marginTop="8dp"
+                android:text="@string/GZ_body4"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView50" />
 
@@ -215,6 +234,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_chainStyle="spread_inside" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
