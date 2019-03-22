@@ -3,6 +3,8 @@ package com.braduni.wasim.asthmaapp;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.google.android.material.navigation.NavigationView;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -58,8 +60,8 @@ public class NavigationActivity extends AppCompatActivity
 
         // load nav menu header data
         auth = FirebaseAuth.getInstance();
-            FirebaseUser user = auth.getCurrentUser();
-            loadNavHeader(user);
+        FirebaseUser user = auth.getCurrentUser();
+        loadNavHeader(user);
 
 
     }
@@ -73,14 +75,15 @@ public class NavigationActivity extends AppCompatActivity
 
 // TODO: 05/03/2019
 
-    // Loading profile image
-   //Glide.with(this).load(imgurl)
-   //        .crossFade()
-   //        .thumbnail(0.5f)
-   //        .bitmapTransform(new CircleTransform(this))
-   //        .diskCacheStrategy(DiskCacheStrategy.ALL)
-   //        .into(imageView);
-}
+        // Loading profile image
+        //Glide.with(this).load(imgurl)
+        //        .crossFade()
+        //        .thumbnail(0.5f)
+        //        .bitmapTransform(new CircleTransform(this))
+        //        .diskCacheStrategy(DiskCacheStrategy.ALL)
+        //        .into(imageView);
+    }
+
 
     @Override
     public void onBackPressed() {

@@ -245,17 +245,37 @@
     <string name="four_times">Four times +</string>
     <string name="not_at_all">Not at all</string>
     <string name="save">save</string>
-    <string name="code_green">Code Green</string>
-    <string name="code_yellow">Code Yellow</string>
-    <string name="code_red">Code Red</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
-    <!-- Action plan -->
+    <!-- Action Plan -->
+    <string name="code_green">Green Zone</string>
+    <string name="GZ_body1">My asthma is being managed well:\n\n
+                            - With this daily routine I should expect/aim to have no symptoms.\n\n
+                            - If I\'ve <b>not</b> had any symptoms or needed my reliever inhaler for at least 12 weeks, ask my GP or asthma nurse to review my medication in case they can reduce the dose.
+    </string>
+    <string name="GZ_body2_title">My daily asthma routine:</string>
+    <string name="my_personal_best_peak_flow_is">My personal best peak flow is:</string>
+    <string name="i_need_to_take_my_preventer_inhaler_every_day_even_when_i_feel_well">I need to take my preventer inhaler every day even when I feel well</string>
+    <string name="i_take">I take</string>
+    <string name="my_preventer_inhaler_insert_name_colour">My preventer inhaler (insert name/colour):</string>
+    <string name="puff_s_at_night">puff(s) at night.</string>
+    <string name="my_reliever_inhaler_insert_name_colour">My reliever inhaler (insert name/colour):</string>
+    <string name="puff_s_in_the_morning_and">puff(s) in the morning and</string>
+    <string name="i_take_my_reliever_inhaler_only_if_i_need_to_i_take">I take my reliever inhaler only if I need to I take</string>
+    <string name="puff_s_of_my_reliever_inhaler_if_any_of_these_things_happen_i_m_wheezing_my_chest_feels_tight_i_m_finding_it_hard_to_breathe_i_m_coughing">puff(s) of my reliever inhaler if any of these things happen:\n ★ I\'m wheezing\n ★ My chest feels tight\n ★ I\'m finding it hard to breathe\n ★ I\'m coughing</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
 
+
+
+    <string name="code_yellow">Yellow Zone</string>
+    <string name="YZ_body1">
+
+
+    </string>
+
+    <string name="code_red">Red Zone</string>
+    <string name="RZ_body1">
+
+    </string>
 
 </resources>
