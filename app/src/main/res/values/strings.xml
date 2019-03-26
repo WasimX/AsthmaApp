@@ -248,13 +248,7 @@
 
 
     <!-- Action Plan -->
-    <string name="code_green">Green Zone</string>
-    <string name="GZ_body1">My asthma is being managed well:\n\n
-                            - With this daily routine I should expect/aim to have no symptoms.\n\n
-                            - If I\'ve <b>not</b> had any symptoms or needed my reliever inhaler for at least 12 weeks, ask my GP or asthma nurse to review my medication in case they can reduce the dose.
-    </string>
     <string name="GZ_body2_title">My daily asthma routine:</string>
-    <string name="pb_peak">My personal best peak flow is:</string>
     <string name="GZ_body_preventer">I need to take my preventer inhaler every day even when I feel well</string>
     <string name="i_take">I take</string>
     <string name="my_preventer_inhaler">My preventer inhaler (insert name/colour):</string>
@@ -268,15 +262,6 @@
 
 
     <string name="code_yellow">Yellow Zone</string>
-    <string name="YZ_body1">
-
-
-    </string>
-
-    <string name="code_red">Red Zone</string>
-    <string name="RZ_body1">
-
-    </string>
 
 
 </resources>
