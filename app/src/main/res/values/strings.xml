@@ -262,6 +262,20 @@
 
 
     <string name="code_yellow">Yellow Zone</string>
+    <string name="resources_for_children_with_asthma">Resources for children with asthma</string>
+    <string name="how_to_get_our_resources">How to get our resources</string>
+    <string name="easy_read_resources">Easy Read resources</string>
+    <string name="written_asthma_action_plans">Written asthma action plans</string>
+    <string name="MI_body3">All our booklets, leaflets and written asthma action plans have been put together to make life easier for people with asthma. We want to help you:\n\n
+                            - understand and manage your asthma better\n
+                            - get the best from your medicines\n
+                            - make the most of your healthcare appointments\n\n
+                            The resources have been developed alongside healthcare professionals who have a specialist interest in asthma and people with asthma who know what it’s like to live with the condition. They have also been certified by The Information Standard, which means they’ve been through a rigorous assessment to check they\'re clear, accurate, balanced, evidence-based and up-to-date.</string>
+    <string name="resources_for_adults_with_asthma">Resources for adults with asthma</string>
+    <string name="online_discussion_forum">Online discussion forum</string>
+    <string name="resources">Resources</string>
+    <string name="our_award_winning_resources_have_been_created_using_the_most_trusted_evidence_and_evaluated_by_healthcare_professionals_and_people_with_asthma">Our award-winning resources have been created using the most trusted evidence and evaluated by healthcare professionals and people with asthma.</string>
+    <string name="schools_resources">Schools resources</string>
 
 
 </resources>
