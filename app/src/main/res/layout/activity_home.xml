@@ -1,16 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Home page"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.254" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/linearLayout4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/history_btn"
+                android:layout_width="148dp"
+                android:layout_height="148dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="64dp"
+                android:layout_marginEnd="8dp"
+                android:background="@null"
+                android:contentDescription="@string/history_icon"
+                android:scaleType="centerInside"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/symptoms_btn"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/history" />
+
+            <ImageButton
+                android:id="@+id/about_asthma_btn"
+                android:layout_width="148dp"
+                android:layout_height="148dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@null"
+                android:contentDescription="@string/about_asthma_icon"
+                android:scaleType="centerInside"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/reminder_btn"
+                app:layout_constraintTop_toBottomOf="@+id/history_btn"
+                app:srcCompat="@drawable/about_asthma" />
+
+            <ImageButton
+                android:id="@+id/reminder_btn"
+                android:layout_width="148dp"
+                android:layout_height="148dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@null"
+                android:contentDescription="@string/reminder_icon"
+                android:scaleType="centerInside"
+                app:layout_constraintEnd_toStartOf="@+id/about_asthma_btn"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/symptoms_btn"
+                app:srcCompat="@drawable/reminder" />
+
+            <ImageButton
+                android:id="@+id/symptoms_btn"
+                android:layout_width="148dp"
+                android:layout_height="148dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="64dp"
+                android:layout_marginEnd="8dp"
+                android:background="@null"
+                android:contentDescription="@string/symptoms_icon"
+                android:scaleType="centerInside"
+                app:layout_constraintEnd_toStartOf="@+id/history_btn"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/log_symptoms" />
+
+            <ImageButton
+                android:id="@+id/support_btn"
+                android:layout_width="148dp"
+                android:layout_height="148dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@null"
+                android:contentDescription="@string/support_icon"
+                android:scaleType="centerInside"
+                app:layout_constraintEnd_toStartOf="@+id/contact_us_btn"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/reminder_btn"
+                app:srcCompat="@drawable/support" />
+
+            <ImageButton
+                android:id="@+id/contact_us_btn"
+                android:layout_width="148dp"
+                android:layout_height="148dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@null"
+                android:contentDescription="@string/contact_us_icon"
+                android:scaleType="centerInside"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/support_btn"
+                app:layout_constraintTop_toBottomOf="@+id/about_asthma_btn"
+                app:srcCompat="@drawable/contact_us" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

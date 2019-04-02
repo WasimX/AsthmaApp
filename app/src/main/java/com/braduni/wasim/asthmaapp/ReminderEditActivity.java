@@ -78,16 +78,16 @@ public class ReminderEditActivity extends AppCompatActivity implements
         setContentView(R.layout.activity_add_reminder);
 
         // Initialize Views
-        mToolbar = (Toolbar) findViewById(R.id.toolbar);
-        mTitleText = (EditText) findViewById(R.id.reminder_title);
-        mDateText = (TextView) findViewById(R.id.set_date);
-        mTimeText = (TextView) findViewById(R.id.set_time);
-        mRepeatText = (TextView) findViewById(R.id.set_repeat);
-        mRepeatNoText = (TextView) findViewById(R.id.set_repeat_no);
-        mRepeatTypeText = (TextView) findViewById(R.id.set_repeat_type);
-        mFAB1 = (FloatingActionButton) findViewById(R.id.starred1);
-        mFAB2 = (FloatingActionButton) findViewById(R.id.starred2);
-        mRepeatSwitch = (Switch) findViewById(R.id.repeat_switch);
+        mToolbar = findViewById(R.id.toolbar);
+        mTitleText = findViewById(R.id.reminder_title);
+        mDateText = findViewById(R.id.set_date);
+        mTimeText = findViewById(R.id.set_time);
+        mRepeatText = findViewById(R.id.set_repeat);
+        mRepeatNoText = findViewById(R.id.set_repeat_no);
+        mRepeatTypeText = findViewById(R.id.set_repeat_type);
+        mFAB1 = findViewById(R.id.starred1);
+        mFAB2 = findViewById(R.id.starred2);
+        mRepeatSwitch = findViewById(R.id.repeat_switch);
 
         // Setup Toolbar
         setSupportActionBar(mToolbar);
@@ -267,18 +267,18 @@ public class ReminderEditActivity extends AppCompatActivity implements
 
     // On clicking the active button
     public void selectFab1(View v) {
-        mFAB1 = (FloatingActionButton) findViewById(R.id.starred1);
+        mFAB1 = findViewById(R.id.starred1);
         mFAB1.setVisibility(View.GONE);
-        mFAB2 = (FloatingActionButton) findViewById(R.id.starred2);
+        mFAB2 = findViewById(R.id.starred2);
         mFAB2.setVisibility(View.VISIBLE);
         mActive = "true";
     }
 
     // On clicking the inactive button
     public void selectFab2(View v) {
-        mFAB2 = (FloatingActionButton) findViewById(R.id.starred2);
+        mFAB2 = findViewById(R.id.starred2);
         mFAB2.setVisibility(View.GONE);
-        mFAB1 = (FloatingActionButton) findViewById(R.id.starred1);
+        mFAB1 = findViewById(R.id.starred1);
         mFAB1.setVisibility(View.VISIBLE);
         mActive = "false";
     }

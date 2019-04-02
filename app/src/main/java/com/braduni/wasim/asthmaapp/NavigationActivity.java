@@ -6,6 +6,8 @@ import android.os.Bundle;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.google.android.material.navigation.NavigationView;
+
+import androidx.annotation.NonNull;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -20,14 +22,10 @@ import android.widget.TextView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-
 public class NavigationActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    private FirebaseAuth auth;
     private TextView txtName, txtEmail;
-    private View navHeader;
-    private ImageView imageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,10 +45,10 @@ public class NavigationActivity extends AppCompatActivity
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        navHeader = navigationView.getHeaderView(0);
-        imageView = (ImageView) navHeader.findViewById(R.id.user_photo);
-        txtName = (TextView) navHeader.findViewById(R.id.login_username);
-        txtEmail = (TextView) navHeader.findViewById(R.id.login_email);
+        View navHeader = navigationView.getHeaderView(0);
+        ImageView imageView = navHeader.findViewById(R.id.user_photo);
+        txtName = navHeader.findViewById(R.id.login_username);
+        txtEmail = navHeader.findViewById(R.id.login_email);
 
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
@@ -59,8 +57,9 @@ public class NavigationActivity extends AppCompatActivity
         }
 
         // load nav menu header data
-        auth = FirebaseAuth.getInstance();
+        FirebaseAuth auth = FirebaseAuth.getInstance();
         FirebaseUser user = auth.getCurrentUser();
+        assert user != null;
         loadNavHeader(user);
 
 
@@ -74,7 +73,7 @@ public class NavigationActivity extends AppCompatActivity
 
 
 // TODO: 05/03/2019
-
+// crashes app when imgurl = to empty string
         // Loading profile image
         //Glide.with(this).load(imgurl)
         //        .crossFade()
@@ -109,19 +108,23 @@ public class NavigationActivity extends AppCompatActivity
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        if (id == R.id.action_logout) {
+        if (id == R.id.action_setting){
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new SettingsActivity()).addToBackStack(null).commit();
+        }
 
+        if (id == R.id.action_logout) {
             FirebaseAuth.getInstance().signOut();
             Intent intent = new Intent(NavigationActivity.this, LoginActivity.class);
             startActivity(intent);
             finish();
         }
+
         return super.onOptionsItemSelected(item);
     }
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 

@@ -259,8 +259,6 @@
     <string name="GZ_body4">puff(s) of my reliever inhaler if any of these things happen:\n ★ I\'m wheezing\n ★ My chest feels tight\n ★ I\'m finding it hard to breathe\n ★ I\'m coughing</string>
 
 
-
-
     <string name="code_yellow">Yellow Zone</string>
     <string name="resources_for_children_with_asthma">Resources for children with asthma</string>
     <string name="how_to_get_our_resources">How to get our resources</string>
@@ -276,6 +274,12 @@
     <string name="resources">Resources</string>
     <string name="our_award_winning_resources_have_been_created_using_the_most_trusted_evidence_and_evaluated_by_healthcare_professionals_and_people_with_asthma">Our award-winning resources have been created using the most trusted evidence and evaluated by healthcare professionals and people with asthma.</string>
     <string name="schools_resources">Schools resources</string>
+    <string name="contact_us_icon">contact_us_icon</string>
+    <string name="about_asthma_icon">about_asthma_icon</string>
+    <string name="symptoms_icon">symptoms_icon</string>
+    <string name="reminder_icon">reminder_icon</string>
+    <string name="history_icon">history_icon</string>
+    <string name="support_icon">support_icon</string>
 
 
 </resources>
