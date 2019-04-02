@@ -197,6 +197,7 @@
                 android:layout_height="match_parent">
 
                 <RadioButton
+                    android:id="@+id/q3_1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8dp"
@@ -210,6 +211,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/log_q2_txt" />
 
                 <RadioButton
+                    android:id="@+id/q3_2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8dp"
@@ -221,6 +223,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/q1_3" />
 
                 <RadioButton
+                    android:id="@+id/q3_3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8dp"
@@ -232,6 +235,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/q1_1" />
 
                 <RadioButton
+                    android:id="@+id/q3_4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8dp"
@@ -243,6 +247,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/q1_2" />
 
                 <RadioButton
+                    android:id="@+id/q3_5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8dp"
@@ -272,6 +277,7 @@
                 android:layout_height="match_parent">
 
                 <RadioButton
+                    android:id="@+id/q4_1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8dp"
@@ -285,6 +291,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/log_q2_txt" />
 
                 <RadioButton
+                    android:id="@+id/q4_2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8dp"
@@ -296,6 +303,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/q1_3" />
 
                 <RadioButton
+                    android:id="@+id/q4_3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8dp"
@@ -307,6 +315,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/q1_1" />
 
                 <RadioButton
+                    android:id="@+id/q4_4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8dp"
@@ -318,6 +327,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/q1_2" />
 
                 <RadioButton
+                    android:id="@+id/q4_5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8dp"
@@ -348,6 +358,7 @@
                 android:layout_height="match_parent">
 
                 <RadioButton
+                    android:id="@+id/q5_1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8dp"
@@ -362,6 +373,7 @@
                     app:layout_constraintVertical_chainStyle="spread_inside" />
 
                 <RadioButton
+                    android:id="@+id/q5_2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8dp"
@@ -373,6 +385,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/q2_1" />
 
                 <RadioButton
+                    android:id="@+id/q5_3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8dp"
@@ -384,6 +397,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/q2_2" />
 
                 <RadioButton
+                    android:id="@+id/q5_4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8dp"
@@ -395,6 +409,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/q2_3" />
 
                 <RadioButton
+                    android:id="@+id/q5_5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8dp"
