@@ -249,7 +249,7 @@
 
     <!-- Action Plan -->
     <string name="GZ_body2_title">My daily asthma routine:</string>
-    <string name="GZ_body_preventer">I need to take my preventer inhaler every day even when I feel well</string>
+    <string name="GZ_body_preventer">I need to take my preventer inhaler every day even when I feel well.</string>
     <string name="i_take">I take</string>
     <string name="my_preventer_inhaler">My preventer inhaler (insert name/colour):</string>
     <string name="at_night">puff(s) at night.</string>
