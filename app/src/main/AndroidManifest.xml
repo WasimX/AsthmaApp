@@ -15,7 +15,7 @@
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
         <activity
-            android:name=".LoginActivity"
+            android:name=".SplashscreenActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -32,6 +32,7 @@
         <activity android:name=".BaseActivity" />
         <activity android:name=".ReminderAddActivity" />
         <activity android:name=".ReminderEditActivity" />
+        <activity android:name=".LoginActivity" />
 
         <receiver android:name=".BootReceiver">
             <intent-filter>

@@ -13,7 +13,7 @@ import androidx.room.TypeConverters;
 //entities shows table names
 @androidx.room.Database(entities = {LogRecords.class}, exportSchema = false, version = 1)
 @TypeConverters({Converters.class})
-public abstract   class Database extends RoomDatabase {
+public abstract class Database extends RoomDatabase {
     public abstract LogsDAO getDao();
 }
 

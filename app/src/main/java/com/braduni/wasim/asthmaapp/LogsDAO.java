@@ -9,6 +9,7 @@ import androidx.room.Query;
 
 
 //This class contains all the operations that we can perform on our database
+// Data access object
 @Dao
 public interface LogsDAO {
 
@@ -29,3 +30,36 @@ public interface LogsDAO {
     void deleteData(LogRecords logRecord);
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
