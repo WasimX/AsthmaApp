@@ -31,7 +31,7 @@
             app:layout_constraintVertical_bias="0.0">
 
             <EditText
-                android:id="@+id/editText4"
+                android:id="@+id/morning"
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -41,10 +41,12 @@
                 android:inputType="textPersonName"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/textView54"
-                app:layout_constraintTop_toBottomOf="@+id/editText2" />
+                android:importantForAutofill="no"
+                app:layout_constraintTop_toBottomOf="@+id/preventer"
+                tools:targetApi="o" />
 
             <EditText
-                android:id="@+id/editText2"
+                android:id="@+id/preventer"
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -52,10 +54,12 @@
                 android:layout_marginEnd="8dp"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:text="Enter Medication"
+                android:importantForAutofill="no"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/textView51"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:text="@string/enter_medication"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:targetApi="o" />
 
             <TextView
                 android:id="@+id/textView54"
@@ -64,13 +68,13 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="8dp"
-                android:text="Puffs in the morning"
-                app:layout_constraintEnd_toStartOf="@+id/editText4"
+                android:text="@string/puffs_in_the_morning"
+                app:layout_constraintEnd_toStartOf="@+id/morning"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView51" />
 
             <EditText
-                android:id="@+id/editText"
+                android:id="@+id/reliever"
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -79,11 +83,13 @@
                 android:layout_marginBottom="8dp"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:text="Enter Medication"
-                app:layout_constraintBottom_toTopOf="@+id/editText3"
+                android:importantForAutofill="no"
+                android:text="@string/enter_medication"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/textView53"
-                app:layout_constraintTop_toBottomOf="@+id/editText5" />
+                app:layout_constraintBottom_toTopOf="@+id/puffs"
+                app:layout_constraintTop_toBottomOf="@+id/night"
+                tools:targetApi="o" />
 
             <TextView
                 android:id="@+id/textView57"
@@ -92,8 +98,8 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="36dp"
                 android:layout_marginEnd="8dp"
-                android:text="Reliever Puffs"
-                app:layout_constraintEnd_toStartOf="@+id/editText3"
+                android:text="@string/reliever_puffs"
+                app:layout_constraintEnd_toStartOf="@+id/puffs"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView53" />
 
@@ -104,14 +110,14 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="56dp"
                 android:layout_marginEnd="8dp"
-                android:text="Reliever"
-                app:layout_constraintEnd_toStartOf="@+id/editText"
+                android:text="@string/reliever"
+                app:layout_constraintEnd_toStartOf="@+id/reliever"
                 app:layout_constraintHorizontal_chainStyle="spread_inside"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView55" />
 
             <EditText
-                android:id="@+id/editText3"
+                android:id="@+id/puffs"
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -121,7 +127,9 @@
                 android:inputType="textPersonName"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/textView57"
-                app:layout_constraintTop_toBottomOf="@+id/editText" />
+                android:importantForAutofill="no"
+                app:layout_constraintTop_toBottomOf="@+id/reliever"
+                tools:targetApi="o" />
 
             <TextView
                 android:id="@+id/textView51"
@@ -130,8 +138,8 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="23dp"
                 android:layout_marginEnd="8dp"
-                android:text="Preventer"
-                app:layout_constraintEnd_toStartOf="@+id/editText2"
+                android:text="@string/preventer"
+                app:layout_constraintEnd_toStartOf="@+id/preventer"
                 app:layout_constraintHorizontal_chainStyle="spread_inside"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -143,13 +151,13 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="36dp"
                 android:layout_marginEnd="8dp"
-                android:text="Puffs at night"
-                app:layout_constraintEnd_toStartOf="@+id/editText5"
+                android:text="@string/puffs_at_night"
+                app:layout_constraintEnd_toStartOf="@+id/night"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView54" />
 
             <EditText
-                android:id="@+id/editText5"
+                android:id="@+id/night"
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -159,7 +167,22 @@
                 android:inputType="textPersonName"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/textView55"
-                app:layout_constraintTop_toBottomOf="@+id/editText4" />
+                android:importantForAutofill="no"
+                app:layout_constraintTop_toBottomOf="@+id/morning"
+                tools:targetApi="o" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="64dp"
+                android:layout_marginEnd="8dp"
+                android:background="@null"
+                android:text="@string/save"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/puffs" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 

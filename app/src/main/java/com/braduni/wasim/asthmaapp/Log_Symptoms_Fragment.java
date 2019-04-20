@@ -3,7 +3,6 @@ package com.braduni.wasim.asthmaapp;
 import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +11,8 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.fragment.app.Fragment;
 
 import java.util.Calendar;
 import java.util.HashMap;
@@ -143,5 +144,6 @@ public class Log_Symptoms_Fragment extends Fragment {
     //This shows message to  the user
     private  void showToast() {
         Toast.makeText(itemView.getContext(), "Record Added Successfully", Toast.LENGTH_SHORT).show();
+
     }
 }

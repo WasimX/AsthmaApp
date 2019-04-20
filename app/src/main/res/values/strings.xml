@@ -280,6 +280,12 @@
     <string name="reminder_icon">reminder_icon</string>
     <string name="history_icon">history_icon</string>
     <string name="support_icon">support_icon</string>
+    <string name="reliever_puffs">Reliever Puffs</string>
+    <string name="reliever">Reliever</string>
+    <string name="enter_medication">Enter Medication</string>
+    <string name="puffs_in_the_morning">Puffs in the morning</string>
+    <string name="preventer">Preventer</string>
+    <string name="puffs_at_night">Puffs at night</string>
 
 
 </resources>
